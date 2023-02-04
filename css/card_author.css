@@ -1,0 +1,67 @@
+div#author-info__sayhi {
+  text-align: left;
+  background: var(--anzhiyu-white-op);
+  color: var(--font-color);
+  border: 1px solid #e3e8f7;
+  font-size: 12px;
+  margin-right: auto;
+  padding: 5px 8px;
+  border-radius: 12px;
+  width: fit-content;
+  display: inline;
+  margin-left: -1px;
+}
+
+.card-widget .author-info__name {
+  line-height: 1.5em;
+  margin: 10px 0 4px;
+}
+
+#aside-content .card-info .author-info__description {
+  margin-top: -.42em;
+}
+
+.card-widget.card-info .banner-button-group {
+  margin: 15px 0 0;
+  display: flex;
+}
+
+#aside-content .card-info .banner-button {
+  height: 40px;
+  width: 100%;
+  margin-right: unset !important;
+  border-radius: 20px;
+  justify-content: center;
+}
+
+.card-widget.card-info .banner-button-group .banner-button {
+  padding: 20px 12px;
+  background: var(--anzhiyu-theme);
+  border-radius: 12px;
+  color: var(--anzhiyu-white);
+  display: flex;
+  align-items: center;
+  z-index: 1;
+  transition: all .3s ease 0s;
+  cursor: pointer;
+}
+
+#aside-content>div.animate__fadeIn.card-info.card-widget.wow>h1 {
+  font-weight: bold;
+  font-size: 1.57em;
+}
+
+#aside-content>div.animate__fadeIn.card-info.card-widget.wow>div.banner-button-group>a>span {
+  color: var(--anzhiyu-white);
+  font-weight: unset;
+}
+
+.card-widget.card-info .banner-button-group .banner-button .fa-solid.fa-circle-chevron-right {
+  font-size: 1.3rem;
+  margin-right: 10px;
+}
+
+.card-widget.card-info .banner-button-group .banner-button:hover {
+  background: var(--anzhiyu-theme-deep);
+  color: var(--anzhiyu-white)
+}

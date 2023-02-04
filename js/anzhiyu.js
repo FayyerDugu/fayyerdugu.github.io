@@ -57,4 +57,3 @@ var anzhiyu = {
     return arr[0];
   },
 };
-addRightMenuClickEvent();
