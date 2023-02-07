@@ -33,7 +33,7 @@
   /* 为载入的字体取名字(随意) */
   font-family: 'Random';
   /* 字体文件地址(相对或者绝对路径都可以) */
-  src: url(/custom/LXGWWenKaiGB-Regular.woff2);
+  src: url(/custom/RuanMengTianXinTu-2.ttf);
   /* 定义加粗样式(加粗多少) */
   font-display: swap;
   font-weight: normal;
