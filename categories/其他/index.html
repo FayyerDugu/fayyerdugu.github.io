@@ -86,7 +86,7 @@
       isHome: false,
       isHighlightShrink: false,
       isToc: false,
-      postUpdate: '2023-02-06 21:14:57'
+      postUpdate: '2023-02-07 10:34:57'
     }
 
   </script><noscript>
@@ -255,7 +255,7 @@
     var categoryParentFlag = false
     var categoriesOption = {
       title: {
-        text: '文章分类统计图',
+        text: '文章分类',
         x: 'center',
         textStyle: {
           color: color
@@ -277,12 +277,12 @@
       categoryParentFlag ? 
       {
         nodeClick :false,
-        name: '文章篇数',
+        name: '篇数',
         type: 'sunburst',
         radius: ['15%', '90%'],
         center: ['50%', '55%'],
         sort: 'desc',
-        data: [{"name":"其他","value":1,"path":"categories/其他/","id":"cldtsfpal000qpoiige9ne55s","parentId":"0"},{"name":"阴阳","value":1,"path":"categories/阴阳/","id":"cldtsfpam000rpoii53rbas50","parentId":"0"}],
+        data: [{"name":"其他","value":1,"path":"categories/其他/","id":"cldukmjfe000r3kiigbf0f1v2","parentId":"0"},{"name":"阴阳","value":1,"path":"categories/阴阳/","id":"cldukmjfg000s3kii3wwrdl4l","parentId":"0"}],
         itemStyle: {
           borderColor: '#fff',
           borderWidth: 2,
@@ -296,7 +296,7 @@
       }
       :
       {
-        name: '文章篇数',
+        name: '篇数',
         type: 'pie',
         radius: [30, 80],
         roseType: 'area',
@@ -304,7 +304,7 @@
           color: color,
           formatter: '{b} : {c} ({d}%)'
         },
-        data: [{"name":"其他","value":1,"path":"categories/其他/","id":"cldtsfpal000qpoiige9ne55s","parentId":"0"},{"name":"阴阳","value":1,"path":"categories/阴阳/","id":"cldtsfpam000rpoii53rbas50","parentId":"0"}],
+        data: [{"name":"其他","value":1,"path":"categories/其他/","id":"cldukmjfe000r3kiigbf0f1v2","parentId":"0"},{"name":"阴阳","value":1,"path":"categories/阴阳/","id":"cldukmjfg000s3kii3wwrdl4l","parentId":"0"}],
         itemStyle: {
           emphasis: {
             shadowBlur: 10,
@@ -369,18 +369,21 @@
           <div class="banner-button-group"><a class="banner-button" data-pjax-state="" onclick="pjax.loadUrl(/about/)"><i class="fa-circle-chevron-right fa-solid"></i><span class="banner-button-text">你是？</span></a>
           </div>
         </div>
-        <div class="card-widget card-announcement">
-          <div class="item-headline"><i class="iconfont icon-huiyuan"></i><span>公告</span>
-          </div>
-          <div class="announcement_content">This is Fayyer. Nice to meet you!
-          </div>
-        </div>
         <div class="card-widget card-visitor">
           <div class="card-content">
             <div class="item-headline"><i class="fas fa-user"></i><span>当前访客</span>
             </div>
             <div id="visitor-container">
               <div class="visitor"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-widget card-weibo">
+          <div class="card-content">
+            <div class="item-headline"><i class="fab fa-weibo"></i><span>微博热搜</span>
+            </div>
+            <div id="weibo-container">
+              <div class="weibo-list"></div>
             </div>
           </div>
         </div>
@@ -416,44 +419,6 @@
               <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E9%98%B4%E9%98%B3/"><span class="card-category-list-name">阴阳</span><span class="card-category-list-count">1</span></a>
               </li>
             </ul>
-          </div>
-          <div class="card-widget card-archives">
-            <div class="item-headline"><i class="fas fa-archive"></i><span>归档</span>
-            </div>
-            <ul class="card-archive-list">
-              <li class="card-archive-list-item"><a class="card-archive-list-link" href="/archives/2023/01/"><span class="card-archive-list-date">一月
-                    2023</span><span class="card-archive-list-count">3</span></a>
-              </li>
-            </ul>
-          </div>
-          <div class="card-widget card-webinfo">
-            <div class="item-headline"><i class="fas fa-chart-line"></i><span>资讯</span>
-            </div>
-            <div class="webinfo">
-              <div class="webinfo-item">
-                <div class="item-name">数目 :</div>
-                <div class="item-count">3</div>
-              </div>
-              <div class="webinfo-item">
-                <div class="item-name">本站总字数 :</div>
-                <div class="item-count">249</div>
-              </div>
-              <div class="webinfo-item">
-                <div class="item-name">本站访客数 :</div>
-                <div class="item-count" id="busuanzi_value_site_uv"><i class="fa-solid fa-spinner fa-spin"></i>
-                </div>
-              </div>
-              <div class="webinfo-item">
-                <div class="item-name">本站总流量 :</div>
-                <div class="item-count" id="busuanzi_value_site_pv"><i class="fa-solid fa-spinner fa-spin"></i>
-                </div>
-              </div>
-              <div class="webinfo-item">
-                <div class="item-name">最后更新 :</div>
-                <div class="item-count" id="last-push-date" data-lastpushdate="2023-02-07T05:14:57.770Z">
-                  <i class="fa-solid fa-spinner fa-spin"></i></div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -570,6 +535,7 @@
 
     </script>
     <script src="/js/visitor.js"></script>
+    <script src="/js/weibo.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js">
     </script>
     <script>

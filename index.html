@@ -94,7 +94,7 @@
       isHome: true,
       isHighlightShrink: false,
       isToc: false,
-      postUpdate: '2023-02-06 21:14:57'
+      postUpdate: '2023-02-07 10:34:57'
     }
 
   </script><noscript>
@@ -332,8 +332,8 @@
                                                                                                 class="fas fa-history"></i><span
                                                                                                 class="article-meta-label">更新</span><time
                                                                                                 class="post-meta-date-updated"
-                                                                                                datetime="2023-02-07T05:08:43.838Z"
-                                                                                                title="更新 2023-02-06 21:08:43">2023-02-06</time></span><span
+                                                                                                datetime="2023-02-07T05:25:16.269Z"
+                                                                                                title="更新 2023-02-06 21:25:16">2023-02-06</time></span><span
                                                                                               class="article-meta"><span
                                                                                                 class="article-meta-separator">|</span><i
                                                                                                 class="fas fa-inbox"></i><a
@@ -507,13 +507,6 @@
                                                                                               class="banner-button-text">你是？</span></a>
           </div>
         </div>
-        <div class="card-widget card-announcement">
-          <div class="item-headline"><i
-                                                                                            class="iconfont icon-huiyuan"></i><span>公告</span>
-          </div>
-          <div class="announcement_content">This is Fayyer. Nice to meet you!
-          </div>
-        </div>
         <div class="card-widget card-visitor">
           <div class="card-content">
             <div class="item-headline"><i
@@ -521,6 +514,16 @@
             </div>
             <div id="visitor-container">
               <div class="visitor"></div>
+            </div>
+          </div>
+        </div>
+        <div class="card-widget card-weibo">
+          <div class="card-content">
+            <div class="item-headline"><i
+                                                                                              class="fab fa-weibo"></i><span>微博热搜</span>
+            </div>
+            <div id="weibo-container">
+              <div class="weibo-list"></div>
             </div>
           </div>
         </div>
@@ -583,52 +586,6 @@
                                                                                                   class="card-category-list-count">1</span></a>
               </li>
             </ul>
-          </div>
-          <div class="card-widget card-archives">
-            <div class="item-headline"><i
-                                                                                              class="fas fa-archive"></i><span>归档</span>
-            </div>
-            <ul class="card-archive-list">
-              <li class="card-archive-list-item"><a class="card-archive-list-link"
-                                                                                                href="/archives/2023/01/"><span
-                                                                                                  class="card-archive-list-date">一月
-                    2023</span><span
-                                                                                                  class="card-archive-list-count">3</span></a>
-              </li>
-            </ul>
-          </div>
-          <div class="card-widget card-webinfo">
-            <div class="item-headline"><i
-                                                                                              class="fas fa-chart-line"></i><span>资讯</span>
-            </div>
-            <div class="webinfo">
-              <div class="webinfo-item">
-                <div class="item-name">数目 :</div>
-                <div class="item-count">3</div>
-              </div>
-              <div class="webinfo-item">
-                <div class="item-name">本站总字数 :</div>
-                <div class="item-count">249</div>
-              </div>
-              <div class="webinfo-item">
-                <div class="item-name">本站访客数 :</div>
-                <div class="item-count" id="busuanzi_value_site_uv"><i
-                                                                                                  class="fa-solid fa-spinner fa-spin"></i>
-                </div>
-              </div>
-              <div class="webinfo-item">
-                <div class="item-name">本站总流量 :</div>
-                <div class="item-count" id="busuanzi_value_site_pv"><i
-                                                                                                  class="fa-solid fa-spinner fa-spin"></i>
-                </div>
-              </div>
-              <div class="webinfo-item">
-                <div class="item-name">最后更新 :</div>
-                <div class="item-count" id="last-push-date"
-                                                                                                data-lastPushDate="2023-02-07T05:14:57.770Z">
-                  <i class="fa-solid fa-spinner fa-spin"></i></div>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -906,6 +863,7 @@
 
     </script>
     <script src="/js/visitor.js"></script>
+    <script src="/js/weibo.js"></script>
     <script
                                                                                     src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js">
     </script>
