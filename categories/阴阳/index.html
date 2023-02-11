@@ -86,7 +86,7 @@
       isHome: false,
       isHighlightShrink: false,
       isToc: false,
-      postUpdate: '2023-02-09 18:58:13'
+      postUpdate: '2023-02-10 20:56:38'
     }
 
   </script><noscript>
@@ -189,6 +189,7 @@
   <link rel="stylesheet" href="/css/custom.css">
   <script src="https://cdn.jsdelivr.net/npm/pace-js/pace.min.js"></script>
   <div id="web_bg"></div>
+  <div id="an_music_bg"></div>
   <div id="sidebar">
     <div id="menu-mask"></div>
     <div id="sidebar-menus">
@@ -196,13 +197,13 @@
       </div>
       <div class="sidebar-site-data site-data is-center"><a href="/archives/">
           <div class="headline">文章</div>
-          <div class="length-num">3</div>
+          <div class="length-num">4</div>
         </a><a href="/tags/">
           <div class="headline">标签</div>
           <div class="length-num">0</div>
         </a><a href="/categories/">
           <div class="headline">分类</div>
-          <div class="length-num">2</div>
+          <div class="length-num">3</div>
         </a></div>
       <hr>
       <div class="menus_items">
@@ -213,16 +214,20 @@
         <div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-songliwu-01"></i><span>
               休闲</span><i class="fas fa-chevron-down"></i></a>
           <ul class="menus_item_child">
+            <li><a class="site-page child" href="/music/"><span> 音乐</span></a>
+            </li>
             <li><a class="site-page child" href="/video/"><i class="fa-fw iconfont icon-yingshi"></i><span>
                   视频</span></a></li>
             <li><a class="site-page child" href="/game/"><i class="fa-fw iconfont icon-diannao"></i><span>
                   游戏</span></a></li>
+            <li><a class="site-page child" href="/air-conditioner/"><span>
+                  空调</span></a></li>
             <li><a class="site-page child" href="/charts/"><i class="fa-fw iconfont icon--tongjibiao"></i><span>
                   统计</span></a></li>
           </ul>
         </div>
         <div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw iconfont icon-haoyou"></i><span>
-              友链</span></a></div>
+              鱼塘</span></a></div>
         <div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw iconfont icon-xihuan-01"></i><span>
               关于</span></a></div>
       </div>
@@ -240,16 +245,20 @@
             <div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-songliwu-01"></i><span>
                   休闲</span><i class="fas fa-chevron-down"></i></a>
               <ul class="menus_item_child">
+                <li><a class="site-page child" href="/music/"><span>
+                      音乐</span></a></li>
                 <li><a class="site-page child" href="/video/"><i class="fa-fw iconfont icon-yingshi"></i><span>
                       视频</span></a></li>
                 <li><a class="site-page child" href="/game/"><i class="fa-fw iconfont icon-diannao"></i><span>
                       游戏</span></a></li>
+                <li><a class="site-page child" href="/air-conditioner/"><span>
+                      空调</span></a></li>
                 <li><a class="site-page child" href="/charts/"><i class="fa-fw iconfont icon--tongjibiao"></i><span>
                       统计</span></a></li>
               </ul>
             </div>
             <div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw iconfont icon-haoyou"></i><span>
-                  友链</span></a></div>
+                  鱼塘</span></a></div>
             <div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw iconfont icon-xihuan-01"></i><span>
                   关于</span></a></div>
           </div>
@@ -281,7 +290,7 @@
       },
       legend: {
         top: 'bottom',
-        data: ["其他","阴阳"],
+        data: ["博客","其他","阴阳"],
         textStyle: {
           color: color
         }
@@ -300,7 +309,7 @@
         radius: ['15%', '90%'],
         center: ['50%', '55%'],
         sort: 'desc',
-        data: [{"name":"其他","value":1,"path":"categories/其他/","id":"cldxxuc2p000tu8ii5r4hg8pt","parentId":"0"},{"name":"阴阳","value":1,"path":"categories/阴阳/","id":"cldxxuc2r000uu8iif5j90c8a","parentId":"0"}],
+        data: [{"name":"博客","value":1,"path":"categories/博客/","id":"cldzhjjr300043wiihy7f7s1t","parentId":"0"},{"name":"其他","value":1,"path":"categories/其他/","id":"cldzhjjrg00113wii00ig4hai","parentId":"0"},{"name":"阴阳","value":1,"path":"categories/阴阳/","id":"cldzhjjrh00123wiihwie9td1","parentId":"0"}],
         itemStyle: {
           borderColor: '#fff',
           borderWidth: 2,
@@ -322,7 +331,7 @@
           color: color,
           formatter: '{b} : {c} ({d}%)'
         },
-        data: [{"name":"其他","value":1,"path":"categories/其他/","id":"cldxxuc2p000tu8ii5r4hg8pt","parentId":"0"},{"name":"阴阳","value":1,"path":"categories/阴阳/","id":"cldxxuc2r000uu8iif5j90c8a","parentId":"0"}],
+        data: [{"name":"博客","value":1,"path":"categories/博客/","id":"cldzhjjr300043wiihy7f7s1t","parentId":"0"},{"name":"其他","value":1,"path":"categories/其他/","id":"cldzhjjrg00113wii00ig4hai","parentId":"0"},{"name":"阴阳","value":1,"path":"categories/阴阳/","id":"cldzhjjrh00123wiihwie9td1","parentId":"0"}],
         itemStyle: {
           emphasis: {
             shadowBlur: 10,
@@ -371,13 +380,13 @@
           </div>
           <div class="card-info-data site-data is-center"><a href="/archives/">
               <div class="headline">文章</div>
-              <div class="length-num">3</div>
+              <div class="length-num">4</div>
             </a><a href="/tags/">
               <div class="headline">标签</div>
               <div class="length-num">0</div>
             </a><a href="/categories/">
               <div class="headline">分类</div>
-              <div class="length-num">2</div>
+              <div class="length-num">3</div>
             </a></div><a id="card-info-btn" href="mailto: fayyerdugu@gmail.com"><i class="fa-sharp fa-solid fa-paper-plane"></i><span>写信问问!</span></a>
           <div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/fayyerdugu" target="_blank" title="Github"><i class="fab fa-github"></i></a><a class="social-icon" href="mailto:fayyerdugu@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a><a class="social-icon" href="https://res.abeim.cn/api/qq/?qq=1282351412" target="_blank" title="QQ"><i class="fab fa-qq"></i></a><a class="social-icon" href="https://space.bilibili.com/66676755?" target="_blank" title="Bilibili"><i class="fab fa-bilibili"></i></a>
           </div>
@@ -410,6 +419,10 @@
             <div class="item-headline"><i class="iconfont icon-lishi"></i><span>最新</span>
             </div>
             <div class="aside-list">
+              <div class="aside-list-item"><a class="thumbnail" href="/2023/02/10/CopyNotice/" title="复制弹窗"><img src="https://i.imgur.com/eX4bMPG.jpg" onerror="this.onerror=null;this.src='/custom/404.png'" alt="复制弹窗"></a>
+                <div class="content"><a class="title" href="/2023/02/10/CopyNotice/" title="复制弹窗">复制弹窗</a><time datetime="2023-02-11T04:00:00.000Z" title="发表 2023-02-10 20:00:00">2023-02-10</time>
+                </div>
+              </div>
               <div class="aside-list-item"><a class="thumbnail" href="/2023/01/04/%E9%98%B4%E9%98%B3%E8%AE%BA/" title="阴阳论"><img src="https://i.imgur.com/nAdaVpw.jpg" onerror="this.onerror=null;this.src='/custom/404.png'" alt="阴阳论"></a>
                 <div class="content"><a class="title" href="/2023/01/04/%E9%98%B4%E9%98%B3%E8%AE%BA/" title="阴阳论">阴阳论</a><time datetime="2023-01-04T20:00:00.000Z" title="发表 2023-01-04 12:00:00">2023-01-04</time>
                 </div>
@@ -418,8 +431,8 @@
                 <div class="content"><a class="title" href="/2023/01/02/Needed/" title="Needed">Needed</a><time datetime="2023-01-02T20:00:00.000Z" title="发表 2023-01-02 12:00:00">2023-01-02</time>
                 </div>
               </div>
-              <div class="aside-list-item"><a class="thumbnail" href="/2023/01/01/First/" title="Hello World!"><img src="https://i.imgur.com/mhFGlGR.jpg" onerror="this.onerror=null;this.src='/custom/404.png'" alt="Hello World!"></a>
-                <div class="content"><a class="title" href="/2023/01/01/First/" title="Hello World!">Hello
+              <div class="aside-list-item"><a class="thumbnail" href="/2023/01/01/HelloWorld/" title="Hello World!"><img src="https://i.imgur.com/mhFGlGR.jpg" onerror="this.onerror=null;this.src='/custom/404.png'" alt="Hello World!"></a>
+                <div class="content"><a class="title" href="/2023/01/01/HelloWorld/" title="Hello World!">Hello
                     World!</a><time datetime="2023-01-01T20:00:00.000Z" title="发表 2023-01-01 12:00:00">2023-01-01</time>
                 </div>
               </div>
@@ -433,6 +446,8 @@
             </div>
             <ul class="card-category-list" id="aside-cat-list">
               <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%85%B6%E4%BB%96/"><span class="card-category-list-name">其他</span><span class="card-category-list-count">1</span></a>
+              </li>
+              <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E5%8D%9A%E5%AE%A2/"><span class="card-category-list-name">博客</span><span class="card-category-list-count">1</span></a>
               </li>
               <li class="card-category-list-item "><a class="card-category-list-link" href="/categories/%E9%98%B4%E9%98%B3/"><span class="card-category-list-name">阴阳</span><span class="card-category-list-count">1</span></a>
               </li>
@@ -554,6 +569,7 @@
     </script>
     <script src="/js/visitor.js"></script>
     <script src="/js/weibo.js"></script>
+    <script async="" data-pjax="" src="/js/anzhiyu.2.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js">
     </script>
     <script>
@@ -566,7 +582,7 @@
     <link rel="stylesheet" href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css" media="print" onload="this.media='all'">
     <script src="https://lf26-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js">
     </script>
-    <script src="/js/meting.js"></script>
+    <script src="/js/Meting2.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script>
     <script>
       let pjaxSelectors = ["head > title", "#config-diff", "#body-wrap",

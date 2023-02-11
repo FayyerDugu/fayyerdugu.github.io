@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>复制弹窗</title>
+      <link href="/2023/02/10/CopyNotice/"/>
+      <url>/2023/02/10/CopyNotice/</url>
+      
+        <content type="html"><![CDATA[<h1>复制弹窗</h1><div class="tip warning"><p>此教程基于猕猴桃🥝的教程：</p></div><a href="https://www.fomal.cc/posts/2d7ac914.html" target="_blank" title="博客魔改教程总结(三) | Fomalhaut🥝" referrerPolicy="no-referrer" class="link_card"><div class="link_icon"><img src="https://i.imgur.com/pW2S0K2.png" class="no-lightbox"></div><div class="link_content"><div class="link_title">博客魔改教程总结(三) | Fomalhaut🥝</div></div></a><p>在<code>\js\copy.js</code>中加入如下代码：</p><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">var</span> button = <span class="variable language_">document</span>.<span class="title function_">getElementById</span>(<span class="string">&quot;debounce&quot;</span>);</span><br><span class="line"><span class="keyword">const</span> <span class="title function_">debounce</span> = (<span class="params">func, delay</span>) =&gt; &#123;</span><br><span class="line">    <span class="keyword">let</span> debounceTimer</span><br><span class="line">    <span class="keyword">return</span> <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">        <span class="keyword">const</span> context = <span class="variable language_">this</span></span><br><span class="line">        <span class="keyword">const</span> args = <span class="variable language_">arguments</span></span><br><span class="line">            <span class="built_in">clearTimeout</span>(debounceTimer)</span><br><span class="line">                debounceTimer</span><br><span class="line">            = <span class="built_in">setTimeout</span>(<span class="function">() =&gt;</span> func.<span class="title function_">apply</span>(context, args), delay)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(<span class="string">&quot;copy&quot;</span>, <span class="title function_">debounce</span>(<span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</span><br><span class="line">  <span class="keyword">new</span> <span class="title class_">Vue</span>(&#123;</span><br><span class="line">    <span class="attr">data</span>: <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">      <span class="variable language_">this</span>.$notify(&#123;</span><br><span class="line">        <span class="attr">title</span>: <span class="string">&quot;复制成功!&quot;</span>,</span><br><span class="line">        <span class="attr">message</span>: <span class="string">&quot;📖 注意缩进&quot;</span>,</span><br><span class="line">        <span class="attr">position</span>: <span class="string">&quot;top-left&quot;</span>,</span><br><span class="line">        <span class="attr">offset</span>: <span class="number">50</span>,</span><br><span class="line">        <span class="attr">showClose</span>: <span class="literal">true</span>,</span><br><span class="line">        <span class="attr">type</span>: <span class="string">&quot;success&quot;</span>,</span><br><span class="line">        <span class="attr">duration</span>: <span class="number">5000</span>,</span><br><span class="line">      &#125;);</span><br><span class="line">    &#125;,</span><br><span class="line">  &#125;);</span><br><span class="line">&#125;,<span class="number">500</span>));</span><br><span class="line"></span><br></pre></td></tr></table></figure><p>最后引入即可。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 博客 </category>
+          
+      </categories>
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>阴阳论</title>
       <link href="/2023/01/04/%E9%98%B4%E9%98%B3%E8%AE%BA/"/>
       <url>/2023/01/04/%E9%98%B4%E9%98%B3%E8%AE%BA/</url>
@@ -43,8 +62,8 @@
     
     <entry>
       <title>Hello World!</title>
-      <link href="/2023/01/01/First/"/>
-      <url>/2023/01/01/First/</url>
+      <link href="/2023/01/01/HelloWorld/"/>
+      <url>/2023/01/01/HelloWorld/</url>
       
         <content type="html"><![CDATA[<h1>Hello World!</h1>]]></content>
       
