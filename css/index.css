@@ -4306,7 +4306,7 @@ h1.page-title+.tag-cloud-list {
 
 #nav .menus_items .menus_item .menus_item_child li a {
   display: inline-block;
-  padding: 8px 16px;
+  padding: 2px 4px;
   width: 100%;
   color: var(--font-color) !important;
   text-shadow: none !important;
@@ -4496,7 +4496,7 @@ h1.page-title+.tag-cloud-list {
 }
 
 #pagination .page-number.current {
-  background: #00c4b6;
+  background: #ffe4bf;
   color: var(--white);
 }
 
@@ -5681,7 +5681,7 @@ blockquote.pullquote.right {
 }
 
 .link_card:hover {
-  background: #4976f5;
+  background: #d2b1ea;
   color: #fff !important;
 }
 
