@@ -261,6 +261,8 @@
             <li><a class="site-page child" href="/charts/"><i
                                                                                                 class="fa-fw iconfont icon--tongjibiao"></i><span>
                   统计</span></a></li>
+            <li><a class="site-page child" href="/collect/"><span> 推荐</span></a>
+            </li>
           </ul>
         </div>
         <div class="menus_item"><a class="site-page" href="/links/"><i
@@ -305,6 +307,8 @@
                 <li><a class="site-page child" href="/charts/"><i
                                                                                                     class="fa-fw iconfont icon--tongjibiao"></i><span>
                       统计</span></a></li>
+                <li><a class="site-page child" href="/collect/"><span>
+                      推荐</span></a></li>
               </ul>
             </div>
             <div class="menus_item"><a class="site-page" href="/links/"><i
@@ -362,7 +366,9 @@
     <main class="layout" id="content-inner">
       <div id="post">
         <article class="post-content" id="article-container">
-          <h1>Hello World!</h1>
+          <h1 id="Hello-World"><a href="#Hello-World" class="headerlink"
+                                                                                            title="Hello World!"></a>Hello
+            World!</h1>
         </article>
         <div class="post-copyright">
           <div class="post-copyright__title"><span class="post-copyright-info">
@@ -488,7 +494,8 @@
             </div>
             <div class="toc-content">
               <ol class="toc">
-                <li class="toc-item toc-level-1"><a class="toc-link"><span
+                <li class="toc-item toc-level-1"><a class="toc-link"
+                                                                                                  href="#Hello-World"><span
                                                                                                     class="toc-number">1.</span>
                     <span class="toc-text">Hello World!</span></a></li>
               </ol>
@@ -539,6 +546,10 @@
                                                                                       href="#post-comment"
                                                                                       title="空降评论"><i
                                                                                         class="iconfont icon-flower1"></i></a><button
+                                                                                      type="button"
+                                                                                      title="切换背景"
+                                                                                      onclick="toggleWinbox()"><i
+                                                                                        class="fas fa-display"></i></button><button
                                                                                       id="go-up"
                                                                                       type="button"
                                                                                       title="顶部"><i
@@ -765,7 +776,11 @@
     <script src="/js/visitor.js"></script>
     <script src="/js/weibo.js"></script>
     <script src="/js/console.js"></script>
+    <script src="/js/bg.js"></script>
     <script async data-pjax src="/js/anzhiyu.2.js"></script>
+    <script
+                                                                                    src="https://cdn.jsdelivr.net/gh/nextapps-de/winbox/dist/winbox.bundle.min.js">
+    </script>
     <script
                                                                                     src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js">
     </script>

@@ -86,7 +86,7 @@
       isHome: false,
       isHighlightShrink: false,
       isToc: false,
-      postUpdate: '2023-02-16 22:24:44'
+      postUpdate: '2023-02-18 16:10:05'
     }
 
   </script><noscript>
@@ -224,6 +224,8 @@
                   空调</span></a></li>
             <li><a class="site-page child" href="/charts/"><i class="fa-fw iconfont icon--tongjibiao"></i><span>
                   统计</span></a></li>
+            <li><a class="site-page child" href="/collect/"><span> 推荐</span></a>
+            </li>
           </ul>
         </div>
         <div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw iconfont icon-haoyou"></i><span>
@@ -255,6 +257,8 @@
                       空调</span></a></li>
                 <li><a class="site-page child" href="/charts/"><i class="fa-fw iconfont icon--tongjibiao"></i><span>
                       统计</span></a></li>
+                <li><a class="site-page child" href="/collect/"><span>
+                      推荐</span></a></li>
               </ul>
             </div>
             <div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw iconfont icon-haoyou"></i><span>
@@ -474,7 +478,7 @@
   <div id="rightside">
     <div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁">译</button><button id="hide-aside-btn" type="button" title="单双"><i class="fas fa-arrows-alt-h"></i></button>
     </div>
-    <div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="iconfont icon-plum_flower spin"></i></button><button id="go-up" type="button" title="顶部"><i class="iconfont icon-flower"></i><span id="percent"><span>0</span><span>%</span></span></button>
+    <div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="iconfont icon-plum_flower spin"></i></button><button type="button" title="切换背景" onclick="toggleWinbox()"><i class="fas fa-display"></i></button><button id="go-up" type="button" title="顶部"><i class="iconfont icon-flower"></i><span id="percent"><span>0</span><span>%</span></span></button>
     </div>
   </div>
   <div id="local-search">
@@ -572,7 +576,10 @@
     <script src="/js/visitor.js"></script>
     <script src="/js/weibo.js"></script>
     <script src="/js/console.js"></script>
+    <script src="/js/bg.js"></script>
     <script async="" data-pjax="" src="/js/anzhiyu.2.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/nextapps-de/winbox/dist/winbox.bundle.min.js">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js">
     </script>
     <script>

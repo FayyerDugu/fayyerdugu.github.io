@@ -228,6 +228,8 @@
                   空调</span></a></li>
             <li><a class="site-page child" href="/charts/"><i class="fa-fw iconfont icon--tongjibiao"></i><span>
                   统计</span></a></li>
+            <li><a class="site-page child" href="/collect/"><span> 推荐</span></a>
+            </li>
           </ul>
         </div>
         <div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw iconfont icon-haoyou"></i><span>
@@ -259,6 +261,8 @@
                       空调</span></a></li>
                 <li><a class="site-page child" href="/charts/"><i class="fa-fw iconfont icon--tongjibiao"></i><span>
                       统计</span></a></li>
+                <li><a class="site-page child" href="/collect/"><span>
+                      推荐</span></a></li>
               </ul>
             </div>
             <div class="menus_item"><a class="site-page" href="/links/"><i class="fa-fw iconfont icon-haoyou"></i><span>
@@ -279,10 +283,11 @@
     <main class="layout" id="content-inner">
       <div id="page">
         <div id="article-container">
-          <h1>统计</h1>
+          <h1 id="统计"><a href="#统计" class="headerlink" title="统计"></a>统计</h1>
           <hr>
           <script src="https://npm.elemecdn.com/echarts@4.9.0/dist/echarts.min.js">
           </script>
+
           <!-- 文章发布时间统计图 -->
           <div id="posts-chart" data-start="2023-01" style="border-radius: 8px; height: 300px; padding: 10px;">
           </div>
@@ -395,6 +400,7 @@
     });
   </script>
           <!-- 文章标签统计图 -->
+
           <div id="tags-chart" data-length="10" style="border-radius: 8px; height: 300px; padding: 10px;">
           </div>
   <script id="tagsChart">
@@ -501,6 +507,7 @@
     });
   </script>
           <!-- 文章分类统计图 -->
+
           <div id="categories-chart" data-parent="true" style="border-radius: 8px; height: 300px; padding: 10px;">
           </div>
   <script id="categoriesChart">
@@ -536,7 +543,7 @@
         radius: ['15%', '90%'],
         center: ['50%', '55%'],
         sort: 'desc',
-        data: [{"name":"学习","value":1,"path":"categories/学习/","id":"cle84od7z000wksii3gsce9gl","parentId":"0"},{"name":"博客","value":1,"path":"categories/博客/","id":"cle84od850013ksiiewhx2kbq","parentId":"0"},{"name":"其它","value":1,"path":"categories/其它/","id":"cle84od860015ksii21kz93ep","parentId":"0"},{"name":"阴阳","value":1,"path":"categories/阴阳/","id":"cle84od870017ksiifox8dzzm","parentId":"0"}],
+        data: [{"name":"学习","value":1,"path":"categories/学习/","id":"cleamtuvn00038cii05q72w17","parentId":"0"},{"name":"博客","value":1,"path":"categories/博客/","id":"cleamtuw400138cii0the87wv","parentId":"0"},{"name":"其它","value":1,"path":"categories/其它/","id":"cleamtuw500168cii3hsz5rq3","parentId":"0"},{"name":"阴阳","value":1,"path":"categories/阴阳/","id":"cleamtuw600188cii6bt35cvb","parentId":"0"}],
         itemStyle: {
           borderColor: '#fff',
           borderWidth: 2,
@@ -558,7 +565,7 @@
           color: color,
           formatter: '{b} : {c} ({d}%)'
         },
-        data: [{"name":"学习","value":1,"path":"categories/学习/","id":"cle84od7z000wksii3gsce9gl","parentId":"0"},{"name":"博客","value":1,"path":"categories/博客/","id":"cle84od850013ksiiewhx2kbq","parentId":"0"},{"name":"其它","value":1,"path":"categories/其它/","id":"cle84od860015ksii21kz93ep","parentId":"0"},{"name":"阴阳","value":1,"path":"categories/阴阳/","id":"cle84od870017ksiifox8dzzm","parentId":"0"}],
+        data: [{"name":"学习","value":1,"path":"categories/学习/","id":"cleamtuvn00038cii05q72w17","parentId":"0"},{"name":"博客","value":1,"path":"categories/博客/","id":"cleamtuw400138cii0the87wv","parentId":"0"},{"name":"其它","value":1,"path":"categories/其它/","id":"cleamtuw500168cii3hsz5rq3","parentId":"0"},{"name":"阴阳","value":1,"path":"categories/阴阳/","id":"cleamtuw600188cii6bt35cvb","parentId":"0"}],
         itemStyle: {
           emphasis: {
             shadowBlur: 10,
@@ -659,7 +666,7 @@
   <div id="rightside">
     <div id="rightside-config-hide"><button id="translateLink" type="button" title="简繁">译</button><button id="hide-aside-btn" type="button" title="单双"><i class="fas fa-arrows-alt-h"></i></button>
     </div>
-    <div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="iconfont icon-plum_flower spin"></i></button><a id="to_comment" href="#post-comment" title="空降评论"><i class="iconfont icon-flower1"></i></a><button id="go-up" type="button" title="顶部"><i class="iconfont icon-flower"></i><span id="percent"><span>0</span><span>%</span></span></button>
+    <div id="rightside-config-show"><button id="rightside_config" type="button" title="设置"><i class="iconfont icon-plum_flower spin"></i></button><a id="to_comment" href="#post-comment" title="空降评论"><i class="iconfont icon-flower1"></i></a><button type="button" title="切换背景" onclick="toggleWinbox()"><i class="fas fa-display"></i></button><button id="go-up" type="button" title="顶部"><i class="iconfont icon-flower"></i><span id="percent"><span>0</span><span>%</span></span></button>
     </div>
   </div>
   <div id="local-search">
@@ -811,7 +818,10 @@
     <script src="/js/visitor.js"></script>
     <script src="/js/weibo.js"></script>
     <script src="/js/console.js"></script>
+    <script src="/js/bg.js"></script>
     <script async="" data-pjax="" src="/js/anzhiyu.2.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/nextapps-de/winbox/dist/winbox.bundle.min.js">
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/activate-power-mode.min.js">
     </script>
     <script>
