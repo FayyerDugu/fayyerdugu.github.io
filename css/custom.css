@@ -1,0 +1,1277 @@
+@font-face {
+  font-family: 'Wenkai';
+  src: url(/custom/WenKai.woff2), url(/custom/LXGWWenKaiTC-Regular.ttf);
+}
+
+@font-face {
+  font-family: 'Zhuanti';
+  src: url(/custom/Zhuanti.TTF);
+  font-stretch: condensed;
+
+}
+
+#page-header.nav-fixed #nav {
+  background-image: url('/custom/nav.webp');
+  /* Path to your background image */
+  background-size: cover;
+  /* This will cover the entire element area */
+  background-repeat: no-repeat;
+  /* Prevents the image from repeating */
+  background-position: center center;
+  /* Centers the image */
+}
+
+#article-container h1:before {
+  font-size: 20px;
+  animation: rotate 5s linear infinite;
+}
+
+/* 页脚透明 */
+#footer {
+  background: transparent !important;
+}
+
+/* 头图透明 */
+#page-header {
+  background: transparent !important;
+}
+
+
+/* 卡片渐变 */
+#aside-content>.card-widget.card-info {
+  background: linear-gradient(-45deg, #7fd2e7, #eccec5, #537cc7, #bdbdf0, #eec1ea);
+  box-shadow: 0 0 5px rgb(66, 68, 68);
+  position: relative;
+  background-size: 400% 400%;
+  -webkit-animation: Gradient 10s ease infinite;
+  -moz-animation: Gradient 10s ease infinite;
+  animation: Gradient 10s ease infinite !important;
+}
+
+@-webkit-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@-moz-keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes Gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+:root {
+  --trans-light: rgba(255, 255, 255, 0.88);
+  --trans-dark: rgba(25, 25, 25, 0.88);
+  --border-style: 1px solid rgb(255, 255, 255, 0.5);
+  --backdrop-filter: blur(5px) saturate(150%);
+}
+
+/* 首页文章卡片 */
+#recent-posts>.recent-post-item {
+  background: var(--trans-light);
+  backdrop-filter: var(--backdrop-filter);
+  border-radius: 25px;
+  border: var(--border-style);
+}
+
+#aside-content .aside-list>.aside-list-item .thumbnail :first-child {
+  border-radius: 10%;
+  /* Makes the element round */
+  object-fit: cover;
+  /* Ensures the image covers the area */
+  width: 100px;
+  /* Specify the width */
+  height: 100px;
+  /* Specify the height, equal to the width for a perfect circle */
+}
+
+
+/* 首页侧栏卡片 */
+#aside-content .card-widget {
+  background: var(--trans-light);
+  backdrop-filter: var(--backdrop-filter);
+  border-radius: 18px;
+  border: var(--border-style);
+}
+
+/* 文章页、归档页、普通页面 */
+div#post,
+div#page,
+div#archive {
+  background: var(--trans-light);
+  border: var(--border-style);
+  border-radius: 20px;
+}
+
+/* 全局宽度 */
+.layout {
+  max-width: 1500px;
+}
+
+/* 侧边卡片栏宽度 */
+.aside-content {
+  max-width: 400px;
+  min-width: 300px;
+}
+
+/* 平板尺寸自适应(不启用侧边栏宽度限制) */
+@media screen and (max-width: 900px) {
+  .aside-content {
+    max-width: none !important;
+    padding: 0 5px 0 5px;
+  }
+}
+
+.loading-img {
+  background: url(https://s2.loli.net/2023/12/17/RZ4M2Coiwt8N6IH.png) no-repeat center center;
+  background-size: cover;
+}
+
+/* 帧率检测 */
+#fps {
+  position: fixed;
+  /* 指定位置 */
+  right: 10px;
+  bottom: 10px;
+  z-index: 1919810;
+}
+
+[data-theme="light"] #fps {
+  background-color: rgba(255, 255, 255, 0.85);
+  backdrop-filter: var(--backdrop-filter);
+  padding: 4px;
+  border-radius: 4px;
+}
+
+[data-theme="dark"] #fps {
+  background-color: rgba(0, 0, 0, 0.72);
+  backdrop-filter: var(--backdrop-filter);
+  padding: 4px;
+  border-radius: 4px;
+}
+
+#aside-content .card-info .author-info__description {
+  font-family: 'Wenkai';
+  font-size: 16px;
+}
+
+#aside-content .card-info .author-info__name {
+  font-family: 'Wenkai';
+  font-size: 30px;
+}
+
+.imgHover,
+.article-sort-item-img :first-child,
+#recent-posts>.recent-post-item .post_cover .post-bg,
+#aside-content .aside-list>.aside-list-item .thumbnail :first-child {
+  border-radius: 25px;
+}
+
+#pagination.pagination-post {
+  border-radius: 15px;
+}
+
+/* 导航栏 */
+#nav .site-name:hover{
+  border-radius: 10px;
+}
+
+.nav-fixed #nav {
+  transform: translateY(0px) !important;
+  -webkit-transform: translateY(0px) !important;
+  -moz-transform: translateY(0px) !important;
+  -ms-transform: translateY(0px) !important;
+  -o-transform: translateY(0px) !important;
+}
+
+#nav {
+  transition: none !important;
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -ms-transition: none !important;
+  -o-transition: none !important;
+}
+#nav .menus_items .menus_item {
+  padding: 0px 10px; /* Adjust top & bottom padding for vertical centering */
+}
+
+#nav .menus_items .menus_item:hover {
+  background-color: #f7e0e8;
+  border-radius: 6px; /* Rounded corners on hover */
+}
+#nav a:hover{
+  transition: none !important;
+  background-color: #f7e0e8 !important;
+}
+
+#menus {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Adjusts for the height and width of the element */
+}
+
+#nav *::after {
+  background-color: transparent !important;
+}
+
+.menus_item_child li:not(#sidebar-menus li) {
+  float: left;
+  border-radius: 6px !important;
+  -webkit-border-radius: 6px !important;
+  -moz-border-radius: 6px !important;
+  -ms-border-radius: 6px !important;
+  -o-border-radius: 6px !important;
+}
+
+.menus_item_child:not(#sidebar-menus ul) {
+  /*
+  left:calc(-150%)!important;这是估算值，为了保持元素居中的，如果不合适可以自己调
+改为：*/
+  left: 50%;
+  translate: -50%;
+}
+#nav #toggle-menu{
+  padding: 0 0 0 5px;
+}
+#name-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Adjusts for the height and width of the element */
+}
+#sidebar #sidebar-menus .menus_items{
+  opacity: 1;
+  visibility: visible;
+}
+
+#post .post-copyright {
+  -webkit-box-shadow: 2px 2px 5px;
+  box-shadow: 2px 2px 5px;
+}
+
+.post-copyright-m-info {
+  display: flex;
+  align-items: center;
+  /* Align items vertically in the center */
+  flex-wrap: wrap;
+  /* Allow items to wrap to next line on smaller screens */
+}
+
+.post-copyright-m-info>* {
+  margin: 0 5px;
+}
+
+#post .post-copyright__title {
+  font-size: 22px;
+}
+
+#post .post-copyright {
+  position: relative;
+  margin: 40px 0 10px;
+  padding: 10px 16px;
+  border: 1px solid var(--light-yellow);
+  -webkit-transition: box-shadow 0.3s ease-in-out;
+  -moz-transition: box-shadow 0.3s ease-in-out;
+  -o-transition: box-shadow 0.3s ease-in-out;
+  -ms-transition: box-shadow 0.3s ease-in-out;
+  transition: box-shadow 0.3s ease-in-out;
+  overflow: hidden;
+  border-radius: 12px !important;
+  background: -webkit-linear-gradient(45deg, #537cc7, #eec1ea, #9a7fe5);
+  background: -moz-linear-gradient(45deg, #537cc7, #eec1ea, #9a7fe5);
+  background: -o-linear-gradient(45deg, #537cc7, #eec1ea, #9a7fe5);
+  background: -ms-linear-gradient(45deg, #537cc7, #eec1ea, #9a7fe5);
+  background: linear-gradient(45deg, #537cc7, #eec1ea, #9a7fe5);
+}
+
+#post .post-copyright:before {
+  position: absolute;
+  right: -26px;
+  top: -120px;
+  content: '\f25e';
+  font-size: 200px;
+  font-family: 'Font Awesome 5 Brands';
+  opacity: .2;
+  color: inherit;
+}
+
+
+footer {
+  display: flex;
+  /* Use Flexbox */
+  justify-content: center;
+  /* Center horizontally */
+  align-items: center;
+  /* Center vertically */
+  height: 100px;
+  /* Or any height you prefer */
+}
+
+.heartbeat-icon {
+  color: red;
+  /* Makes the icon red */
+  animation: heartbeat 1s infinite;
+}
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+
+  25% {
+    transform: scale(1.2);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  75% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+#recent-posts>.recent-post-item .post_cover {
+  border-radius: 25px
+}
+
+/* 古诗词卡片 */
+#card-poem {
+  display: flex;
+  flex-direction: column;
+  padding: 0.5rem !important;
+  min-height: 130px;
+}
+
+div#poem_sentence {
+  font-size: 1.5rem;
+  text-align: center;
+  font-family: "Wenkai";
+  line-height: 1.4;
+  margin-bottom: 0.5rem;
+  padding: 1rem;
+  border-radius: 12px;
+  background: #bdbdf0;
+  min-height: 80px;
+}
+
+div#poem_info {
+  display: flex;
+  color: #bdbdf0;
+  font-size: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+div#poem_author {
+  order: 1;
+  padding: 2px;
+  margin-left: 8px;
+}
+
+div#poem_dynasty {
+  order: 0;
+  padding: 2px 4px 2px 6px;
+  background: #b3b6a7;
+  color: #36365c;
+  border-radius: 8px;
+}
+
+/* 分类页 */
+.category-lists .category-list .category-list-item {
+  position: relative;
+  display: inline-block;
+  width: 48%;
+  height: max-content;
+  font-weight: bold;
+  margin: 0 .5% 2% .5%;
+  border-radius: var(--border-radius);
+  border-radius: 15px;
+}
+
+@media (max-width: 768px) {
+  .category-lists .category-list .category-list-item {
+    width: 95%;
+  }
+}
+
+.category-lists .category-list .category-list-item::before {
+  display: none;
+}
+
+.category-lists .category-list .category-list-item .category-list-link {
+  color: #d6ccd9;
+  font-size: 1.5em;
+  margin-left: .4em;
+}
+
+.category-lists .category-list .category-list-item .category-list-link::after {
+  content: '';
+  position: relative;
+  width: 0;
+  bottom: 0;
+  display: block;
+  height: 3px;
+  border-radius: 3px;
+  background: var(--second);
+  -webkit-transition: all .6s ease-in-out;
+  -moz-transition: all .6s ease-in-out;
+  -ms-transition: all .6s ease-in-out;
+  -o-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+}
+
+.category-lists .category-list .category-list-item .category-list-link:hover::after {
+  width: 60%;
+}
+
+.category-lists .category-list .category-list-item .category-list-count {
+  color: #d6ccd9;
+  font-size: 1.3em;
+}
+
+.category-lists .category-list .category-list-item .category-list-count::before {
+  content: '\f02d';
+  padding-right: 1em;
+  font-family: 'Font Awesome 6 Free';
+}
+
+.category-lists .category-list .category-list-item .category-list-count::after {
+  display: none;
+}
+
+.category-lists .category-list li.category-list-item a.category-list-link::before {
+  position: absolute;
+  font-size: 4rem;
+  line-height: 4rem;
+  top: 1rem;
+  right: 1rem;
+  opacity: .7;
+  box-shadow: 0 3px 8px 6px rgb(85 85 85 / 6%);
+  -webkit-transform: rotate(-15deg);
+  -moz-transform: rotate(-15deg);
+  -ms-transform: rotate(-15deg);
+  -o-transform: rotate(-15deg);
+  transform: rotate(-15deg);
+  -webkit-transition: all .6s ease-in-out;
+  -moz-transition: all .6s ease-in-out;
+  -ms-transition: all .6s ease-in-out;
+  -o-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+}
+
+.category-lists .category-list li.category-list-item a.category-list-link:hover::before {
+  opacity: .9;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+
+.category-lists .category-list li.category-list-item:nth-child(1) {
+  background: -webkit-linear-gradient(left,#fbd786,#f7797d);
+  background: -moz-linear-gradient(left,#fbd786,#f7797d);
+  background: -o-linear-gradient(left,#fbd786,#f7797d);
+  background: -ms-linear-gradient(left,#fbd786,#f7797d);
+  background: linear-gradient(to right,#fbd786,#f7797d);
+}
+
+.category-lists .category-list li.category-list-item:nth-child(2) {
+  background: -webkit-linear-gradient(left,#00b09b,#96c93d);
+  background: -moz-linear-gradient(left,#00b09b,#96c93d);
+  background: -o-linear-gradient(left,#00b09b,#96c93d);
+  background: -ms-linear-gradient(left,#00b09b,#96c93d);
+  background: linear-gradient(to right,#00b09b,#96c93d);
+}
+
+.category-lists .category-list li.category-list-item:nth-child(3) {
+  background: -webkit-linear-gradient(left,#acb6e5,#86fde8);
+  background: -moz-linear-gradient(left,#acb6e5,#86fde8);
+  background: -o-linear-gradient(left,#acb6e5,#86fde8);
+  background: -ms-linear-gradient(left,#acb6e5,#86fde8);
+  background: linear-gradient(to right,#acb6e5,#86fde8);
+}
+
+.category-lists .category-list li.category-list-item:nth-child(4) {
+  background: -webkit-linear-gradient(left,#ef32d9,#89fffd);
+  background: -moz-linear-gradient(left,#ef32d9,#89fffd);
+  background: -o-linear-gradient(left,#ef32d9,#89fffd);
+  background: -ms-linear-gradient(left,#ef32d9,#89fffd);
+  background: linear-gradient(to right,#ef32d9,#89fffd);
+}
+
+.category-lists .category-list li.category-list-item:nth-child(5) {
+  background: -webkit-linear-gradient(left,#81baff,#79cbca);
+  background: -moz-linear-gradient(left,#81baff,#79cbca);
+  background: -o-linear-gradient(left,#81baff,#79cbca);
+  background: -ms-linear-gradient(left,#81baff,#79cbca);
+  background: linear-gradient(to right,#81baff,#79cbca);
+}
+
+.category-lists .category-list li.category-list-item:nth-child(6) {
+  background: -webkit-linear-gradient(left,#4776e6,#8e54e9);
+  background: -moz-linear-gradient(left,#4776e6,#8e54e9);
+  background: -o-linear-gradient(left,#4776e6,#8e54e9);
+  background: -ms-linear-gradient(left,#4776e6,#8e54e9);
+  background: linear-gradient(to right,#4776e6,#8e54e9);
+}
+
+
+#aside-content .aside-list>.aside-list-item .thumbnail {
+  border-radius: var(--border-radius);
+}
+
+#aside-content .aside-list>.aside-list-item .content>.title,
+#aside-content .aside-list>.aside-list-item .content>.comment {
+  font-weight: 500;
+}
+
+#aside-content .card-archives ul.card-archive-list>.card-archive-list-item a:hover,
+#aside-content .card-categories ul.card-category-list>.card-category-list-item a:hover {
+  color: var(--second) !important;
+  background: var(--main);
+  -webkit-box-shadow: var(--main-shadow);
+  -moz-box-shadow: var(--main-shadow);
+  -ms-box-shadow: var(--main-shadow);
+  -o-box-shadow: var(--main-shadow);
+  box-shadow: var(--main-shadow);
+}
+
+#aside-content .card-archives ul.card-archive-list>.card-archive-list-item a span.card-archive-list-date,
+#aside-content .card-categories ul.card-category-list>.card-category-list-item a span.card-category-list-name {
+  opacity: .8;
+  /* font-weight: bold; */
+}
+
+#aside-content .card-archives ul.card-archive-list>.card-archive-list-item a span.card-archive-list-count,
+#aside-content .card-categories ul.card-category-list>.card-category-list-item a span.card-category-list-count {
+  position: relative;
+  line-height: 2rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: right;
+}
+
+#aside-content .card-archives ul.card-archive-list>.card-archive-list-item a span.card-archive-list-count::after,
+#aside-content .card-categories ul.card-category-list>.card-category-list-item a span.card-category-list-count::after {
+  content: '篇';
+  opacity: .8;
+  font-size: 1rem;
+  margin-left: .5rem;
+}
+
+#aside-content .card-archives ul.card-archive-list,
+#aside-content .card-categories ul.card-category-list {
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+
+#aside-content .card-archives ul.card-archive-list>.card-archive-list-item,
+#aside-content .card-categories ul.card-category-list>.card-category-list-item {
+  width: calc(50% - .25rem);
+  margin-top: .5rem;
+}
+
+#aside-content .card-archives ul.card-archive-list>.card-archive-list-item a,
+#aside-content .card-categories ul.card-category-list>.card-category-list-item a {
+  border-radius: var(--border-radius);
+  background: var(--global-bg);
+  display: flex;
+  flex-direction: column;
+}
+
+#aside-content .card-archives ul.card-archive-list>.card-archive-list-item a span,
+#aside-content .card-categories ul.card-category-list>.card-category-list-item a span {
+  overflow: visible;
+}
+
+/* 设置文字内容 :nth-child(1)的作用是选择第几个 */
+.el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(2):before {
+  content: '输入QQ号会自动获取昵称和头像🐧';
+}
+
+.el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(3):before {
+  content: '收到回复将会发送到您的邮箱📧';
+}
+
+.el-input.el-input--small.el-input-group.el-input-group--prepend:nth-child(4):before {
+  content: '可以通过昵称访问您的网站🔗';
+}
+
+/* 当用户点击输入框时显示 */
+.el-input.el-input--small.el-input-group.el-input-group--prepend:focus-within::before,
+.el-input.el-input--small.el-input-group.el-input-group--prepend:focus-within::after {
+  display: block;
+}
+
+/* 主内容区 */
+.el-input.el-input--small.el-input-group.el-input-group--prepend::before {
+  /* 先隐藏起来 */
+  display: none;
+  /* 绝对定位 */
+  position: absolute;
+  /* 向上移动60像素 */
+  top: -60px;
+  /* 文字强制不换行，防止left:50%导致的文字换行 */
+  white-space: nowrap;
+  /* 圆角 */
+  border-radius: 10px;
+  /* 距离左边50% */
+  left: 50%;
+  /* 然后再向左边挪动自身的一半，即可实现居中 */
+  transform: translate(-50%);
+  /* 填充 */
+  padding: 14px 18px;
+  background: #0043b7;
+  color: #fff;
+}
+
+/* 小角标 */
+.el-input.el-input--small.el-input-group.el-input-group--prepend::after {
+  display: none;
+  content: '';
+  position: absolute;
+  /* 内容大小（宽高）为0且边框大小不为0的情况下，每一条边（4个边）都是一个三角形，组成一个正方形。
+    我们先将所有边框透明，再给其中的一条边添加颜色就可以实现小三角图标 */
+  border: 12px solid transparent;
+  border-top-color: #444;
+  left: 50%;
+  transform: translate(-50%, -48px);
+}
+
+/************ twikoo评论中的背景框样式调整 ************/
+#twikoo .tk-content {
+  background: linear-gradient(-45deg #c5fff1 #c5d9ff #ffc5db);
+  padding: 10px 15px;
+  border-radius: 10px;
+}
+
+.tk-content * {
+  margin: 0;
+}
+
+/************ twikoo评论中的背景框样式调整 ************/
+
+/* 收起/展开的长条按钮样式 */
+.tk-expand {
+  background: var(--card-bg);
+  border: 1px solid #e0e3ed;
+  box-shadow: 0 5px 10px rgb(189 189 189 / 10%);
+  transition: all .3s ease-in-out;
+  border-radius: 12px;
+}
+
+#name-container, .menus_items {
+  transition: opacity 0.5s ease, visibility 0.5s ease;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#name-container.show, .menus_items.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.flexcard-flink-list {
+  display: flex;
+  gap: 20px; /* Creates space between flex items */
+}
+
+.tk-content {
+  background-color: rgb(200, 219, 237); /* Sets the background color to gray */
+  border-radius: 10px;    /* Rounds the corners with a radius of 10px */
+}
+
+
+.fa-comments:before {
+  font-size: 20px;
+}
+#article-container img{
+  max-height: none;
+}
+
+.tk-footer[data-v-c0af544c] {
+  display: none; /* This will hide the element */
+}
+
+/*哔哩哔哩视频适配*/
+.video-bilibili {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 65%;
+  margin: 3% auto;
+  text-align: center;
+}
+.video-bilibili iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+}
+
+.video-youtube {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin: 3% auto;
+}
+.video-youtube iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+/* 我的装备 */
+.equipment-item-content {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 0 -8px;
+}
+
+.equipment-item-content-item {
+  width: calc(25% - 12px);
+  border-radius: 12px;
+  border: var(--style-border-always);
+  overflow: hidden;
+  margin: 8px 6px;
+  background: white;
+  box-shadow: var(--heo-shadow-border);
+  min-height: 400px;
+  position: relative;
+}
+
+@media screen and (max-width: 1200px) {
+  .equipment-item-content-item {
+    width: calc(50% - 12px);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .equipment-item-content-item {
+    width: 100%;
+  }
+}
+
+.equipment-item-content-item-info {
+  padding: 8px 16px 16px 16px;
+  margin-top: 12px;
+}
+
+.equipment-item-content-item-name {
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: fit-content;
+}
+
+.equipment-item-content-item-specification {
+  font-size: 12px;
+  color: #1f3b6b;
+  line-height: 1;
+  margin-bottom: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.equipment-item-content-item-description {
+  line-height: 20px;
+  color: #1f3b6b;
+  height: 60px;
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  font-size: 14px;
+}
+
+a.equipment-item-content-item-link {
+  font-size: 12px;
+  background: rgb(209, 190, 190);
+  padding: 4px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  color: #311d69;
+}
+
+a.equipment-item-content-item-link:hover {
+  background: black;
+  color: white;
+}
+
+h2.equipment-item-title {
+  line-height: 1;
+}
+
+.equipment-item-description {
+  line-height: 1;
+  margin: 4px 0 8px 0;
+  color: #1f3b6b;
+}
+
+.equipment-item-content-item-cover {
+  width: 100%;
+  height: 200px;
+  background: white;
+  display: flex;
+  justify-content: center;
+}
+
+img.equipment-item-content-item-image {
+  object-fit: cover;
+  height: 100%;
+}
+
+div#equipment {
+  margin-top: 26px;
+}
+
+.equipment-item-content-item-toolbar {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  width: 100%;
+  padding: 0 16px;
+}
+
+/* 返回顶部 */
+button#go-up #percent {
+  display: none;
+  font-weight: bold;
+  font-size: 15px !important;
+}
+
+button#go-up span {
+  font-size: 12px!important;
+  margin-right: -1px;
+}
+
+/* 鼠标滑动到按钮上时显示返回顶部图标 */
+button#go-up:hover i {
+  display: block !important;
+}
+
+button#go-up:hover #percent {
+  display: none !important;
+}
+
+/* 音乐 */
+#page:has(#anMusic-page) {
+  border: 0;
+  box-shadow: none !important;
+  background: transparent !important;
+}
+#an_music_bg {
+  display: none;
+  filter: blur(63px);
+  opacity: 0.6;
+  position: fixed;
+  z-index: -999;
+  background-attachment: local;
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 200%;
+  height: 200%;
+  top: -50%;
+  left: -50%;
+  transform: rotate(0deg);
+}
+body:has(#anMusic-page) #an_music_bg {
+  display: block;
+}
+
+body:has(#anMusic-page) {
+  background: rgb(13, 13, 13);
+}
+
+#anMusic-page meting-js .aplayer {
+  display: flex;
+  flex-direction: row-reverse;
+  background: rgba(0, 0, 0, 0);
+  border: none;
+  box-shadow: none;
+}
+
+body:has(#anMusic-page) #web_bg {
+  display: none;
+}
+body:has(#anMusic-page) #footer,
+body:has(#anMusic-page) #nav-music {
+  display: none;
+}
+
+#anMusic-page .aplayer-body {
+  width: 40%;
+  height: 75vh;
+}
+
+#anMusic-page ol > li:hover {
+  background: #ffffff33;
+  border-radius: 6px;
+}
+#anMusic-page .aplayer-pic {
+  float: none;
+  width: 180px;
+  height: 180px;
+  border-radius: 12px;
+  margin: auto;
+  left: 0;
+  right: 0;
+}
+
+#anMusic-page .aplayer-info {
+  margin: 0 20px 0 20px;
+  border-bottom: none;
+}
+
+#anMusic-page .aplayer-info .aplayer-music {
+  text-align: center;
+  height: auto;
+  margin: 15px;
+}
+
+#anMusic-page .aplayer-info .aplayer-music .aplayer-author,
+#anMusic-page .aplayer-info .aplayer-music .aplayer-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+#anMusic-page .aplayer-info .aplayer-lrc {
+  height: 800%;
+  margin-top: 80px;
+  mask-image: linear-gradient(to bottom, #000, #000, #000, #000, #000, #000, #000, #000, #000, #000, #0000, #0000);
+}
+#anMusic-page .aplayer-info .aplayer-lrc p {
+  font-size: 14px;
+  color: #fff;
+}
+#anMusic-page .aplayer .aplayer-lrc:after,
+#anMusic-page .aplayer .aplayer-lrc:before {
+  display: none;
+}
+
+/* 控制器 */
+#anMusic-page .aplayer-info .aplayer-controller {
+  position: fixed;
+  max-width: 1500px;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 50px;
+  color: white;
+}
+#anMusic-page .aplayer-info .aplayer-controller .aplayer-bar-wrap {
+  margin: 0 160px 0 150px;
+  color: white;
+}
+#anMusic-page .aplayer-info .aplayer-controller .aplayer-played {
+  background: var(--anzhiyu-white) !important;
+  color: white;
+}
+#anMusic-page .aplayer-info .aplayer-controller .aplayer-thumb {
+  -webkit-transform: none;
+  transform: none;
+  background: #fff !important;
+  
+}
+#anMusic-page .aplayer-info .aplayer-time .aplayer-icon-back,
+#anMusic-page .aplayer-info .aplayer-time .aplayer-icon-forward,
+#anMusic-page .aplayer-info .aplayer-time .aplayer-icon-play {
+  display: inline;
+  position: fixed;
+  color: white;
+}
+#anMusic-page .aplayer-info .aplayer-time {
+  position: absolute;
+  width: 100%;
+  bottom: 21px;
+  height: 0;
+  display: flex;
+  justify-content: flex-end;
+}
+#anMusic-page .aplayer-info .aplayer-time .aplayer-time-inner {
+  margin-right: 18px;
+  margin-top: -8px;
+}
+#anMusic-page .aplayer-info .aplayer-time .aplayer-icon-back {
+  position: absolute;
+  left: 0;
+}
+#anMusic-page .aplayer-info .aplayer-time .aplayer-icon-play {
+  position: absolute;
+  left: 40px;
+}
+#anMusic-page .aplayer-info .aplayer-time .aplayer-icon-forward {
+  position: absolute;
+  left: 80px;
+}
+
+#anMusic-page .aplayer-info .aplayer-time .aplayer-icon {
+  width: 2rem;
+  height: 2rem;
+  margin-left: 15px;
+}
+
+#anMusic-page .aplayer-info .aplayer-time .aplayer-icon-menu {
+  display: none;
+}
+
+#anMusic-page .aplayer-info .aplayer-time .aplayer-icon path {
+  fill: var(--anzhiyu-white);
+  opacity: 0.8;
+}
+
+#anMusic-page .aplayer-list {
+  width: 60%;
+  max-height: none !important;
+  height: 100%;
+}
+#anMusic-page ol {
+  max-height: 75vh !important;
+  padding-right: 25px;
+}
+#anMusic-page ol > li {
+  border-top: 1px solid transparent;
+  font-size: 14px;
+  color: white !important;
+}
+#anMusic-page ol > li.aplayer-list-light {
+  background: rgb(255 255 255 / 20%);
+  border-radius: 6px;
+}
+
+#anMusic-page ol > li span {
+  color: var(--anzhiyu-white);
+}
+
+#anMusic-page ol > li.aplayer-list-light .aplayer-list-cur {
+  display: none;
+}
+#anMusic-page ol > li span.aplayer-list-author {
+  opacity: 0.6;
+}
+
+/* 导航栏 */
+.page:has(#anMusic-page) #nav {
+  backdrop-filter: none !important;
+  background: 0 0 !important;
+  border-bottom: none !important;
+}
+
+.page:has(#anMusic-page) #page-header.not-top-img #nav a,
+.page:has(#anMusic-page) #page-header #nav .back-home-button {
+  color: var(--anzhiyu-white);
+}
+
+body:has(#anMusic-page) .s-sticker div {
+  color: var(--anzhiyu-white) !important;
+}
+
+body:has(#anMusic-page) .aplayer .aplayer-info .aplayer-controller .aplayer-time .aplayer-icon.aplayer-icon-loop {
+  margin-right: 15px;
+}
+
+[data-theme="dark"] .page:has(#anMusic-page) #page-header:before {
+  background-color: transparent;
+}
+
+/* **** 移动端样式 ***** */
+@media screen and (max-width: 768px) {
+  body:has(#anMusic-page) #rightside {
+    display: none;
+  }
+  body:has(#anMusic-page) #content-inner,
+  body:has(#anMusic-page) #page {
+    z-index: auto;
+  }
+  /* 歌曲列表 */
+  #anMusic-page .aplayer-list {
+    position: fixed;
+    z-index: 1002;
+    width: 100%;
+    bottom: -76%;
+    left: 0;
+    background: var(--sidebar-bg);
+    height: auto;
+    border-radius: 15px 15px 0px 0px;
+    padding: 15px 0px;
+  }
+  #anMusic-page .aplayer-list.aplayer-list-hide {
+    bottom: 0% !important;
+  }
+  #anMusic-page ol {
+    max-height: 60vh !important;
+    padding-right: 0px;
+  }
+  #anMusic-page ol > li {
+    display: flex;
+    margin: 0 10px;
+  }
+  #anMusic-page ol > li span {
+    color: var(--font-color);
+  }
+  #anMusic-page ol > li span.aplayer-list-title {
+    width: 30%;
+  }
+  #anMusic-page ol > li.aplayer-list-light {
+    background: #33a673;
+    padding: 5px 20px;
+    border-radius: 10px;
+  }
+  #anMusic-page ol > li.aplayer-list-light span {
+    color: #fff;
+  }
+  #anMusic-page ol > li span.aplayer-list-title {
+    max-width: 55%;
+    width: auto;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+  }
+  #anMusic-page ol > li span.aplayer-list-author {
+    position: absolute;
+    right: 10px;
+    width: auto;
+    max-width: 35%;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+    -webkit-box-orient: vertical;
+  }
+  #anMusic-page ol > li.aplayer-list-light span.aplayer-list-author {
+    right: 15px;
+  }
+  /* 歌词信息 */
+  #anMusic-page .aplayer-body {
+    width: 100%;
+
+    position: fixed;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 100px;
+  }
+  #anMusic-page .aplayer-info .aplayer-lrc {
+    margin-top: 40px;
+    height: auto;
+    max-height: 200%;
+    min-height: 100%;
+    mask-image: linear-gradient(to bottom, #000, #000, #000, #000, #0000, #0000);
+  }
+  #anMusic-page .aplayer-info .aplayer-lrc p.aplayer-lrc-current {
+    color: #33a673;
+  }
+  /* 控制按键和进度条 */
+  #anMusic-page .aplayer-info .aplayer-controller {
+    width: 100%;
+    bottom: 100px;
+  }
+  #anMusic-page .aplayer-info .aplayer-controller .aplayer-bar-wrap {
+    margin: 0 30px;
+  }
+  #anMusic-page .aplayer-info .aplayer-time {
+    bottom: -40px;
+  }
+  #anMusic-page .aplayer-info .aplayer-time .aplayer-time-inner {
+    position: absolute;
+    width: 100%;
+    margin-right: 0;
+    margin-top: -33px;
+  }
+  #anMusic-page .aplayer-info .aplayer-time .aplayer-time-inner .aplayer-dtime {
+    position: absolute;
+    right: 30px;
+  }
+  #anMusic-page .aplayer-info .aplayer-time .aplayer-time-inner .aplayer-ptime {
+    position: absolute;
+    left: 35px;
+  }
+  #anMusic-page .aplayer-info .aplayer-time .aplayer-icon-back {
+    margin: auto;
+    right: 110px;
+  }
+  #anMusic-page .aplayer-info .aplayer-time .aplayer-icon-play {
+    margin: auto;
+    right: 0;
+    left: 0;
+  }
+  #anMusic-page .aplayer-info .aplayer-time .aplayer-icon-forward {
+    margin: auto;
+    left: 110px;
+    right: 0;
+  }
+  #anMusic-page .aplayer-info .aplayer-time .aplayer-icon-order {
+    position: absolute;
+    left: 22px;
+  }
+  #anMusic-page .aplayer-info .aplayer-time .aplayer-icon-loop {
+    position: absolute;
+    right: 25px;
+  }
+  #anMusic-page .aplayer-info .aplayer-time .aplayer-icon-menu {
+    display: inline;
+    position: absolute;
+    right: 25px;
+    top: -90px;
+  }
+  #anMusic-page .aplayer-volume-bar-wrap {
+    bottom: 0px;
+    right: 7px;
+  }
+  #anMusic-page .aplayer .aplayer-info .aplayer-controller .aplayer-volume-wrap {
+    left: -66px;
+  }
+}
