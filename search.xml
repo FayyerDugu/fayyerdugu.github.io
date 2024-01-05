@@ -27,7 +27,7 @@
       <link href="/News/"/>
       <url>/News/</url>
       
-        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="imageContainer">    <span id="loadingText">...加载...</span>    <img src="https://v2.alapi.cn/api/zaobao?token=fPrrWWQ49ABoiyz9&format=image" onload="imageLoaded()" style="display:none;"></div><script>    function imageLoaded() {        document.getElementById('loadingText').style.display = 'none';        const image = document.querySelector('#imageContainer img');        image.style.display = 'block';    }</script>]]></content>
+        <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><div id="imageContainer">    <span id="loadingText" style="text-align: center;">...少女祈祷中...</p>    <img src="https://v2.alapi.cn/api/zaobao?token=fPrrWWQ49ABoiyz9&format=image" onload="imageLoaded()" style="display:none;"></div><script>    function imageLoaded() {        document.getElementById('loadingText').style.display = 'none';        const image = document.querySelector('#imageContainer img');        image.style.display = 'block';    }</script>]]></content>
       
       
       <categories>

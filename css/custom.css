@@ -1275,3 +1275,6 @@ body:has(#anMusic-page) .aplayer .aplayer-info .aplayer-controller .aplayer-time
     left: -66px;
   }
 }
+#nav .site-page{
+  cursor: auto;
+}
