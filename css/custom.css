@@ -141,7 +141,7 @@ div#archive {
 
 /* 全局宽度 */
 .layout {
-  max-width: 2000px;
+  max-width: 1600px;
 }
 
 /* 侧边卡片栏宽度 */
@@ -1349,4 +1349,15 @@ body:has(#anMusic-page) .aplayer .aplayer-info .aplayer-controller .aplayer-time
 
 #nav .site-page {
   cursor: auto;
+}
+
+.experience {
+  position: fixed;
+  width: 100vw;
+  height: calc(100vh + 5px);;
+  top: -5px;
+}
+
+.postImgHover .cover, #pagination .prev-post .cover, #pagination .next-post .cover, .relatedPosts > .relatedPosts-list > div .cover{
+  border-radius: 0px !important;
 }

@@ -2068,6 +2068,9 @@ figure.highlight pre .javascript .function {
     filter: alpha(opacity=60);
   }
 }
+#rightside {
+  display: none;
+}
 .article-sort {
   margin-left: 10px;
   padding-left: 20px;
