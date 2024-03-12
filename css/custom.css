@@ -702,6 +702,13 @@ div#poem_dynasty {
   margin: 0;
 }
 
+.tk-submit-action-icon.__markdown{
+  display: none !important;
+}
+
+.tk-input .el-textarea__inner{
+  height: 110px !important;
+}
 /************ twikoo评论中的背景框样式调整 ************/
 
 /* 收起/展开的长条按钮样式 */
@@ -739,10 +746,6 @@ div#poem_dynasty {
   /* Rounds the corners with a radius of 10px */
 }
 
-
-.fa-comments:before {
-  font-size: 20px;
-}
 
 #article-container img {
   max-height: none;
@@ -1361,3 +1364,18 @@ body:has(#anMusic-page) .aplayer .aplayer-info .aplayer-controller .aplayer-time
 .postImgHover .cover, #pagination .prev-post .cover, #pagination .next-post .cover, .relatedPosts > .relatedPosts-list > div .cover{
   border-radius: 0px !important;
 }
+
+.fa-yin-yang {
+  width: 20px !important; 
+  animation: rotate 5s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
