@@ -1,0 +1,9 @@
+body {
+    cursor: url(/custom/Claymore.cur),
+        default !important;
+}
+a,
+img {
+    cursor: url(/custom/Catalyst.cur),
+        default !important;
+}

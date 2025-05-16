@@ -1,0 +1,899 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>CFA | 独孤若梦</title><meta name="author" content="独孤若梦"><meta name="copyright" content="独孤若梦"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="ffffff"><meta name="description" content="CFA Ch.1  $$FV_N &#x3D; PV(1+r)^N$$ $$FV_N&#x3D;PV(1+\dfrac{r}{m})^{mN}$$ $$FV_N&#x3D;PVe^{r_N}$$ $$EAR&#x3D;(1+r_m)^m-1$$ $$EAR&#x3D;e^{r}-1$$ $$FV_N&#x3D;A[\dfrac{(1+r)^N-1}{r}]$$ $$PV&#x3D;A\left[\dfrac{1-\dfrac{1}{(1+r)^n}}{r}\righ">
+<meta property="og:type" content="article">
+<meta property="og:title" content="CFA">
+<meta property="og:url" content="https://www.fayyer.com/CFA/index.html">
+<meta property="og:site_name" content="独孤若梦">
+<meta property="og:description" content="CFA Ch.1  $$FV_N &#x3D; PV(1+r)^N$$ $$FV_N&#x3D;PV(1+\dfrac{r}{m})^{mN}$$ $$FV_N&#x3D;PVe^{r_N}$$ $$EAR&#x3D;(1+r_m)^m-1$$ $$EAR&#x3D;e^{r}-1$$ $$FV_N&#x3D;A[\dfrac{(1+r)^N-1}{r}]$$ $$PV&#x3D;A\left[\dfrac{1-\dfrac{1}{(1+r)^n}}{r}\righ">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://s2.loli.net/2024/07/12/gzVaGqOIm2sJwT4.png">
+<meta property="article:published_time" content="2023-02-14T16:00:00.000Z">
+<meta property="article:modified_time" content="2025-05-16T08:29:32.773Z">
+<meta property="article:author" content="独孤若梦">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://s2.loli.net/2024/07/12/gzVaGqOIm2sJwT4.png"><link rel="shortcut icon" href="/custom/favicon.jpg"><link rel="canonical" href="https://www.fayyer.com/CFA/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: {"path":"/search.xml","preload":false,"top_n_per_article":1,"unescape":false,"languages":{"hits_empty":"找不到您查询的内容：${query}","hits_stats":"共找到 ${hits} 篇文章"}},
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlight.js","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":500},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分前',
+    hour: '时前',
+    day: '天前',
+    month: '月前'
+  },
+  copyright: undefined,
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: 'CFA',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-05-16 16:29:32'
+}</script><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><link rel="stylesheet" href="//at.alicdn.com/t/c/font_3865036_1fs2ydl3ewv.css"><link rel="stylesheet" href="/css/custom.css"><link rel="stylesheet" href="/css/rightmenu.css"><link rel="stylesheet" href="/css/iconfont.css"><link rel="stylesheet" href="/css/mouse.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous"><span id="fps"></span><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/element-ui@2.15.14/lib/theme-chalk/index.min.css"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"><!-- hexo injector head_end start --><link rel="stylesheet" href="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/font-awesome-animation.min.css" media="defer" onload="this.media='all'"><link rel="stylesheet" href="/css/tag_plugins.css" media="defer" onload="this.media='all'"><script src="https://npm.elemecdn.com/hexo-butterfly-tag-plugins-plus@latest/lib/assets/carousel-touch.js"></script><!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head><body><div id="loading-box" onclick="document.getElementById(&quot;loading-box&quot;).classList.add(&quot;loaded&quot;)"> <div class="loading-bg"> <div class="petals"><div class="loader"><div class="petal" style="--i: 1;"> </div><div class="petal" style="--i: 2;"> </div><div class="petal" style="--i: 3;"> </div><div class="petal" style="--i: 4;"> </div><div class="petal" style="--i: 5;"> </div><div class="petal" style="--i: 6;"> </div><div class="petal" style="--i: 7;"> </div><div class="petal" style="--i: 8;"> </div></div></div></div></div><script>const preloader = {
+  endLoading: () => {
+    document.body.style.overflow = 'auto';
+    document.getElementById('loading-box').classList.add("loaded")
+  },
+  initLoading: () => {
+    document.body.style.overflow = 'hidden';
+    document.getElementById('loading-box').classList.remove("loaded")
+  }
+}
+preloader.initLoading()
+window.addEventListener('load',()=> { preloader.endLoading() })
+
+if (true) {
+  document.addEventListener('pjax:send', () => { preloader.initLoading() })
+  document.addEventListener('pjax:complete', () => { preloader.endLoading() })
+}</script><div id="web_bg"></div><div id="an_music_bg"></div><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="/custom/Avatar.png" onerror="onerror=null;src='/custom/cover.jpg'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">13</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">4</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-jiarufangjian-01"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw iconfont icon-kapian-01"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-songliwu-01"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><span> 音乐</span></a></li><li><a class="site-page child" href="/video/"><span> 视频</span></a></li><li><a class="site-page child" href="/game/"><span> 游戏</span></a></li><li><a class="site-page child" href="/collect/"><span> 推荐</span></a></li><li><a class="site-page child" href="/equipment/"><span> 装备</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw iconfont icon-haoyou"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw iconfont icon-xihuan-01"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url('https://s2.loli.net/2024/07/12/gzVaGqOIm2sJwT4.png')"><nav id="nav"><span id="blog-info"><a href="/" title="独孤若梦"><span class="site-name">独孤若梦</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw iconfont icon-jiarufangjian-01"></i><span> 首页</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw iconfont icon-kapian-01"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page group" href="javascript:void(0);"><i class="fa-fw iconfont icon-songliwu-01"></i><span> 娱乐</span><i class="fas fa-chevron-down"></i></a><ul class="menus_item_child"><li><a class="site-page child" href="/music/"><span> 音乐</span></a></li><li><a class="site-page child" href="/video/"><span> 视频</span></a></li><li><a class="site-page child" href="/game/"><span> 游戏</span></a></li><li><a class="site-page child" href="/collect/"><span> 推荐</span></a></li><li><a class="site-page child" href="/equipment/"><span> 装备</span></a></li></ul></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw iconfont icon-haoyou"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw iconfont icon-xihuan-01"></i><span> 关于</span></a></div></div></div><div class="center" id="name-container"><a class="site-page" id="page-name" href="javascript:void(0);" onclick="scrollToTop();">PAGE_NAME</a></div><div id="search-button"><a class="site-page social-icon search" href="javascript:void(0);"><i class="fas fa-search fa-fw"></i><span> </span></a></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></nav><div id="post-info"><h1 class="post-title">CFA</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="iconfont icon-rili"></i><span class="post-meta-label">发表</span><time class="post-meta-date-created" datetime="2023-02-14T16:00:00.000Z" title="发表 2023-02-15 00:00:00">2023-02-15</time><span class="post-meta-separator">|</span><i class="iconfont icon-lishi1"></i><span class="post-meta-label">更新</span><time class="post-meta-date-updated" datetime="2025-05-16T08:29:32.773Z" title="更新 2025-05-16 16:29:32">2025-05-16</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="iconfont icon-wenjianjia"></i><a class="post-meta-categories" href="/categories/%E5%AD%A6%E4%B9%A0/">学习</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="CFA"><i class="iconfont icon-xinxi"></i><span class="post-meta-label">点击:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1>CFA</h1>
+<h2 id="Ch-1">Ch.1</h2>
+<ul>
+<li>$$FV_N = PV(1+r)^N$$</li>
+<li>$$FV_N=PV(1+\dfrac{r}{m})^{mN}$$</li>
+<li>$$FV_N=PVe^{r_N}$$</li>
+<li>$$EAR=(1+r_m)^m-1$$</li>
+<li>$$EAR=e^{r}-1$$</li>
+<li>$$FV_N=A[\dfrac{(1+r)^N-1}{r}]$$</li>
+<li>$$PV=A\left[\dfrac{1-\dfrac{1}{(1+r)^n}}{r}\right]$$</li>
+<li>$$A=\frac{PV\times r}{1-(1+r)^{-n}} $$</li>
+<li>$$PV=PMT/r$$</li>
+<li>$$g=(\dfrac{FV_N}{PV})^{\frac{1}{N}}-1$$</li>
+<li>$$\frac{F_{A/B}}{S_{A/B}}=\frac{(1+r_A)^n}{(1+r_B)^n}$$</li>
+<li>$$(1+r_n)^n=(1+r_m)^m\times(1+F_{m,m-n})^{m-n}$$</li>
+<li>$$CTR=(1+\frac{discount}{1-discount})^{\frac{\Delta t}{365}}-1$$</li>
+</ul>
+<h2 id="Ch-2">Ch.2</h2>
+<ul>
+<li>$$X_G=\sqrt[n]{X_1X_2X_3…X_n}$$</li>
+<li>$$R_G=\left[\prod^T_{t=1}(1+R_t)\right]^{\frac{1}{r}}-1$$</li>
+<li>$$X_H=\dfrac{n}{\sum^n_{i=1}{\frac{1}{X_i}}}$$</li>
+<li>$$\bar{X} \times X_H=X_G$$</li>
+<li>$$MAD=\dfrac{\sum^n_{i=1}|X_i-\bar{x}|}{n}$$</li>
+<li>$$\sigma^2=\dfrac{\sum^n_{i=1}(X_i-\bar{X})^2}{n-1}$$</li>
+<li>$$\text{Coefficient of Variation: }CV=\frac{\sigma}{\mu}$$</li>
+<li>$$\sigma_{xy}=\dfrac{\sum^n_{i=1}(x_i-\bar{x})(y_i-\bar{y})}{n-1}$$</li>
+<li>$$\text{Correlation Coefficient: }r_{xy}=\dfrac{\sigma_{xy}}{\sigma_x\sigma_y}$$</li>
+</ul>
+<h2 id="Ch-3">Ch.3</h2>
+<ul>
+<li>$$P(A|B) = \frac{P(AB)}{P(B)}$$</li>
+<li>$$P(A or B) = P(A) + P(B) - P(AB)$$</li>
+<li>$$\text{Independent: }P(AB) = P(A)P(B)$$</li>
+<li>$$Cov(x,y)=E[(x-E(x))(y-E(y))]$$</li>
+<li>$$\sigma^2(R_p) = \sum\sum w_iw_jCov(R_i,R_j)$$</li>
+<li>$$P(A|B)=\dfrac{P(B|A)}{P(B)}P(A)$$</li>
+<li>$$\sigma_p=\sqrt{w_1^2\sigma^2_1+w_2^2\sigma^2_2+2w_1w_2\rho_{1,2}\sigma_1\sigma_2}$$</li>
+</ul>
+<h2 id="Ch-4">Ch.4</h2>
+<ul>
+<li>$$r_{t,t+1}=ln(S_{t+1}/S_t)=ln(1+R_{t,t+1})$$</li>
+<li>$$\frac{E(R_p-R_f)}{\sigma_p}$$</li>
+</ul>
+<h2 id="Ch-5">Ch.5</h2>
+<ul>
+<li>$$s^2=\frac{\sum^n_{i=1}(X_i-\bar{X})^2}{n-1}$$</li>
+<li>$$\bar{X}\pm z_{\alpha/2}\frac{s}{\sqrt{n}}$$</li>
+</ul>
+<h2 id="Ch-6">Ch.6</h2>
+<ul>
+<li>$$\chi^2=\frac{(n-1)s^2}{\sigma^2}$$</li>
+<li>$$F=\frac{s_1^2}{s_2^2}$$</li>
+<li>$$\text{Spearman: } r_s=1-\frac{6\Sigma^n_{i=1}d_i^2}{n(n^2-1)}$$</li>
+<li>$$t=\frac{r\sqrt{n-2}}{\sqrt{1-r^2}}$$</li>
+</ul>
+<h2 id="Ch-7">Ch.7</h2>
+<ul>
+<li>$$\text{SSE=}\sum^n_{i=1}(Y_i-\hat{Y_i})^2$$</li>
+<li>$$\text{SST=}\sum^n_{i=1}(Y_i-\bar{Y_i})^2$$</li>
+<li>$$\text{SSR=}\sum^n_{i=1}(\hat{Y_i}-\bar{Y_i})^2$$</li>
+<li>$$\text{Coefficient of Determination=}\frac{SSR}{SST}=R^2$$</li>
+<li>$$\text{Mean Square Regression=}\frac{SSR}{k}$$</li>
+<li>$$\text{Mean Square Error=}\frac{SSE}{n-k-1}$$</li>
+<li>$$F=\frac{MSR}{MSE}$$</li>
+</ul>
+<h2 id="Ch-8">Ch.8</h2>
+<ul>
+<li>Real exchange rate = Nominal exchange rate $\times \frac{\text{Price of foreign}}{\text{Price of domestic}}$</li>
+<li>Demand is negatively sloped because of either the substitution effect or income effect</li>
+<li>If the good is inferior, the income effect will partially or fully offset the substitution effect</li>
+<li>Giffen goods are highly inferior and as price falls, and demand curve for Giffen goods are positively sloped</li>
+<li>Cross price elasticity is the the ratio of the percentage change in quantity demanded of one good to the percentage change in the priceo f a related good</li>
+<li>The law of demand states that a decrease in price will cause an increase in quantity demanded</li>
+<li>Short run total cost (STC) is the total expenditure on fixed capital plus the total expenditure on labor</li>
+<li>Average variable cost (AVC) is the ratio of wage to average product of labor</li>
+<li>Average total cost (ATC) is the total cost (TC) devided by the number of units produced</li>
+<li>Economic cost takes into account the total opportunity cost of all factors of production</li>
+<li>Opportunity cost is the next best alternative forgone in making a decision</li>
+<li>Maximum economic profit requires MR=MC, and MC not be falling with output</li>
+<li>Breakeven point occurs when TR=TC, or AC=P=MC in the long run</li>
+<li>Economies of scale is defined as decreasing long run cost per unit of output under conditions in which all inputs are variable</li>
+</ul>
+<h2 id="Ch-9">Ch.9</h2>
+<ul>
+<li>$$MR=P[1-1/E_p]$$</li>
+<li>Perfect competition, monopolistic competition, oligopoly, and monopoly</li>
+<li>The optimal marginal revenue equals marginal cost</li>
+<li>The quantity sold is highest in perfect competition</li>
+<li>Monopolists sell a smaller quantity at a higher price</li>
+<li>Competitive firms do not earn economic profit</li>
+<li>Oligopoly is characterized by the importance of strategic behavior</li>
+</ul>
+<h2 id="Ch-10">Ch.10</h2>
+<ul>
+<li>National income = GDP - capital consumption allowance and a statistical discrepancy</li>
+<li>Private saving: S = I + G - T + X - M</li>
+<li>Marginal propensity  to consume is the fraction of an additional unit of disposable incoem that is spent</li>
+<li>Aggregate demand and aggregate supply determines the level of real GDP and the price level</li>
+<li>Wealth effect, interest rate effect, real exchange rate effect, and the currve of aggregate demand is downward</li>
+<li>AD curve will shift if changes in household wealth, consumer and business expectations, capacityy utilization, mmonetary policy, fiscal policy, exchange rates, and other nations GDP</li>
+<li>Movements along AS curve reflect the effects of price on supply</li>
+<li>SRAS curve is upward sloping because higher prices result in higher proftis and induce businesses to produce more</li>
+<li>In the short run, some prices are sticky, implying that some prices do not adjust to changes in demand</li>
+<li>In the long run, all prices are assumed to be flexible, so the LRAS curve is vertical becaues input costs adjust to changes in output prices, leaving the optimal level of output unchanged, the position is determined by the economys level of potential GDP</li>
+<li>The LRAS curve will shift because of changes in labor supply, supply of physical and human capital, and productivity and technology</li>
+<li>The SRAS curve will shift because of changes in potential GDP, nominal wages, input prices, expectations about future prices, business taxes and subsidiaries, and the exchange rate</li>
+<li>Short term fluctuations in GDP are caused by shifts in AD and AS</li>
+<li>When the level of GDP is below potential GDP, such a recessionary situation exerts downward pressure on the aggregate price level</li>
+<li>When the level of GDP is above potential GDP, such an overheated situation puts upward pressure on the aggregate price level</li>
+<li>Stagflation, a combination of high inflation and weak economic growth, is caused by a decline SRAS</li>
+<li>The sources of economic growth, include the supply of labor, the supply of physical and human capitals, raw materials, and technology</li>
+<li>Total factor productivity (TFP) is a scale factor that reflects the portion of output growth that is not accounted for by changes in capital and labor inputs</li>
+<li>Potential GDP growth = TFP + $W_L$ + $W_C$ , growth in labor, and growth in capital</li>
+<li>The sustainable rate of economic growth is measured by the rate of increase in the economys productive capacity or potential GDP</li>
+<li>Externalities and spillover effects are recognized to play an important role in growth</li>
+</ul>
+<h2 id="Ch-11">Ch.11</h2>
+<ul>
+<li>Business cycles are recurrent expansions and contractions in economc activity affecting broad segments of the economy</li>
+<li>Business cycles can be split into many different phases, recovery expansion slowdown and contraction</li>
+<li>Credit cycle describe the changing availability and pricing of credit</li>
+<li>Neoclassical and Real Business Cycle theories focus on fluctuations of AS, government intervention is generally not necessary</li>
+<li>Keynesian theories focus on fluctuations of AD, advocate government intervention to restore full employment and avoid deflation</li>
+<li>Monetarists argue that the better to let the economy find its new equilibrium unassisted while ensuring growing money supply</li>
+<li>Leading economic indicators have turning points that usually precede those of the overall economy, includes survey based indicators, new orders, average consumer expectations, average weekly hours, new building permits, stock market index, term spread</li>
+<li>Coincident economic indicators have turning points that are close, includes industrial production, manufacturing and trade sales indexes, aggregate real personal income, and non agricultural employment</li>
+<li>Lagging economic indicators have turning points that take place later, includes average duration of unemployment, inventory sales ratio, change in unit labor costs, average bank prime lending rate, change in consumer price index for services</li>
+<li>Unemployment are those who are actively seeking employment but are currently without a job</li>
+<li>Frictionally unemployed are those who are not working because they are taking time to serach for a job that matches</li>
+<li>Hyperinflation indicates a high and increasing inflation rate, deflation indicates a negative inflation rate, imported inflation is increasing cost of inputs that come from abroad, demand inflation is caused by constraints in production</li>
+<li>CPI reflects the prices of a baset goods and services that is typically purchased by a normal household</li>
+<li>Real factors include AS and AD, monetary factors include supply of money and the velocity of money</li>
+<li>Cost-push which rising costs or wages compel businesses to raise prices generally, demand-pull which increasing demand raises prices generally</li>
+<li>Core inflation excludes food and energy, used to determine public economic policy</li>
+<li>Fisher Index = $\sqrt{I_{Laspeyres}*I_{Paasche}}$</li>
+</ul>
+<h2 id="Ch-12">Ch.12</h2>
+<ul>
+<li>$M \times V = P \times Y$</li>
+<li>Monetary policy refers to central bank activities that are directed toward influencing the quantity of moeny and credit</li>
+<li>Fiscal policy refers to the governments decisions about taxation and spending</li>
+<li>Functions of money: medium of exchange, storing weath, unit of account</li>
+<li>Demand for money is the amount of wealth that citizens choose to hold in the form of money</li>
+<li>Motives for holding money: transactions related, precautionary, and speculative</li>
+<li>Nominal rate of interest is comprised of real required rate of interest, compensation for future inflation, and risk premium</li>
+<li>Central banks: the monopoly supplier of their currency, the lender of last resort, bank of the banks and government, supervise banks</li>
+<li>Central banks couldnt control the amount of money that households and corporations put in banks on deposit, and control the willingness of banks to create money by expanding credit, ultimately the money supply</li>
+<li>Money neutrality is that money cannot influence the real economy in the long run</li>
+<li>By setting of its policy rate, a central bank hopes to influence the real economy via the policy rates impact on other market interest rates, asset prices, the exchange rate, and the expectations of economic agents</li>
+<li>Inflation targeting is the most common monetary policy, quantitiative easing attempts to spur aggregate demand by drastically increasing money supply</li>
+<li>Although both fiscal and monetary policy can alter aggregate demand, they work through different channels, policies are therefore not interchangeable, and they conceivably can work against one another unless government and central bank coordinate their objectives</li>
+</ul>
+<h2 id="Ch-13">Ch.13</h2>
+<ul>
+<li>Absolute advantage if it is able to produce that good at a lower absolute cost</li>
+<li>Comparative advantage if its opportunity cost of producing that good is lower</li>
+<li>Trade barriers prevent the free flow of goods and services among countries, for the purpose of promote specific developmental objectives, counteract certain imperfections in the functioning of markets, respond to problems facing their economies</li>
+<li>Small country is defiend as one that cannot affect the world price of traded goods</li>
+<li>A voluntary export restraint is imposed by the exporting country, like import quota which foreigners capture all of the quota rents</li>
+<li>The distortion of production, consumption, and trade decisions generates a welfare loss</li>
+<li>Capital restrictions are defiend as controls placed on foreigners ability to own domestic assets and vice versa</li>
+<li>Trade restrictions limit the openness of goods market, and capital restrictions limit the openness of financial markets</li>
+<li>In a free trade area all barriers to the flow of goods and services among members are eliminated, but each country maintains its own polices against non-members</li>
+<li>A customs union extends FTA by not only allowing free movement but also creating a common trade policy against non members</li>
+<li>A common market extends customs union by allowing free movement of factors of production among members</li>
+<li>An economic union requires common economic institutions and coordination of economic policies among members</li>
+<li>Members of a monetary union adopt a common currency</li>
+<li>Major components of the balance of payments are current account balance, which largely reflects trade in goods and services, capital account balance, which consists of capital transfers and net sales of non financial assets, and financial account, which measures net capital flows based on sales and purchases of domestic and foreign financial assets</li>
+<li>Low private savings or high investment tend to produce a current account deficit that must be financed by net capital imports</li>
+<li>High private savings or low investment produce a current account surplus, balanced by net capital exports</li>
+<li>A government deficit produces a current account deficit and surplus produces a surplus</li>
+</ul>
+<h2 id="Ch-14">Ch.14</h2>
+<ul>
+<li>A direct currency quote takes the domestic currency as the price currency and the foreign currency as the base currency</li>
+<li>An indirect quote uses the domestic currency as the base currency</li>
+<li>Currencies trade in foregin exchange markets based on nominal exchange rates</li>
+<li>The real exchange rate, defined as the nominal exchang rate multiplied by the ratio of price levels</li>
+<li>Spot exchange rates are for immdediate settlement, while forward exchange rates are for settlement at agreed upon future dates</li>
+<li>Forward rates are typically quoted in terms of forward points, the forward points are added to the spot exchange rate in order to calculate the forward rate</li>
+<li>The base currency is said to be trading at a forward premium if the forward rate is above the spot rate</li>
+<li>Conversely,at a forward discount if the forward rate is below the spot rate</li>
+<li>The currency with the higher interest rate will trade at a forward discount</li>
+<li>Swap points are proportional to the spot rate and to the interst rate differential and approximately proportional to the terms of the forward contract</li>
+<li>The policy framework that each central bank adopts is called an exchange rate regime</li>
+<li>A trade surplus/deficit must be matched by a corresponding deficit/surplus in the capital account</li>
+<li>A trade surplus reflects an excess of domestic saving over investment spending</li>
+<li>A trade deficit reflects an excess of domestic investment over saving</li>
+<li>The elasticity approach focuses on the effct of changing the relative price of domestic and foreign goods</li>
+<li>The absorption approach focuses on the impact of exchange rates on aggregate expenditure/saving decision</li>
+<li>In order to move the trade balance toward surplus/deficit, a change in the exchange rate must decrease/increase domestic expenditure relative to income</li>
+<li>If there is excess capacity in the economy, then currency depreciation can increase output/income by switching demand toward domestically produced goods and services</li>
+<li>If the economy is at full employment, then currency depreciation must reduce domestic expenditure in order to improve the trade balance, wealth effect</li>
+<li>$\frac{Forward}{Spot}=\frac{1+i_p}{1+i_b}$</li>
+</ul>
+<h2 id="Ch-15">Ch.15</h2>
+<ul>
+<li>Revenue + Other income - Expenses = Income - Expenses = Net Income</li>
+<li>Operating activities involve the cash effects of transactions comprise the day to day operations of the company</li>
+<li>Investing activities are associated with the acquisition and disposal of long term assets</li>
+<li>Financing activities relate to obtaining or repaying capital to be used in the business</li>
+<li>The balance sheet discloses what resources a company controls and what it owes: Assets = Liability + Equity</li>
+<li>The income statement presents information on the financial results of a companys business activities</li>
+<li>The statement of comprehensive income includes all items that change owners equity except transactions with owners</li>
+<li>The statement of change in equity provides information about increases or decreases in the various components of owners equity</li>
+<li>The notes or footnotes that accompnay the financial statements are an integral part of those statements</li>
+<li>A publicly traded company must have an independent audit performed on its annual financial statements</li>
+<li>In most cases, information from sources apart from the company are crucial to an analyst’s effectiveness</li>
+<li>Steps for financial statement analysis: articulate the purpose and context of the analysis, collect input data, process data, analyze/interpret the processed data, develop and communicate conclusions and recommendations, and follow up</li>
+</ul>
+<h2 id="Ch-16">Ch.16</h2>
+<ul>
+<li>The objective of ifnancial reporting is to provide financial information useful in making decisions about providing resources</li>
+<li>Financial reporting requires policy choices and estimates, which require judgement</li>
+<li>The IFRS framework sets forth the concepts that underlie the preparation and presentation of financial statements for external users</li>
+<li>The objective of fair presentation of useful information is the center of the IASBs Conceptual Framework</li>
+<li>Financial statements need to reflect certain basic features: fair presentation, going concern, accrual basis, materiality and aggregation, and no offestting</li>
+</ul>
+<h2 id="Ch-17">Ch.17</h2>
+<ul>
+<li>Revenue is the amount charged for the goods or services in the ordinary activities of a business</li>
+<li>Net revenue is the renuve that has been adjusted to cash or volume discounts</li>
+<li>Expenses reflect outflows, depletions of assets, and incurrences of liabilities</li>
+<li>Net income = Income - Expenses = Revenue + Other Income - Expenses</li>
+<li>Gross profit/Gross margin = Revenue - Expenses</li>
+<li>Operating profit results from deducting operating expenses such as selling, general, administrative and R&amp;D from gross profit</li>
+<li>Amortization is depreciation of intangible long lived assets</li>
+<li>$\text{Basic EPS}=\frac{\text{Net income - Preferrd dividends}}{\text{Weighted average number of shares outstanding}}$</li>
+<li>$\text{Net profit margin}=\frac{\text{Net profit}}{\text{Revenue}}$</li>
+<li>$\text{Gross profit margin}=\frac{\text{Gross profit}}{\text{Revenue}}$</li>
+<li>The income statement presents revenue, expenses, and net income</li>
+<li>An income statement that presents a subtotal for gross profit is said to be presented in a multi step format</li>
+<li>One that does not present this subtotal is said to be presented in a single step format</li>
+<li>Revenue is recognized in the period it is earned, which may or may not be in the same period as the related cash collection</li>
+<li>Recognition of revenue when earned is a fundamental principal of accrual accounting</li>
+<li>Non operating items are reported separately from operating items on the income statement</li>
+<li>Common size analysis of the income statement involves stating each line item as a percentage of sales</li>
+<li>Comprehensive income includes <em>both</em> net income and other revenue and expense items that are excluded from the net income calculation.</li>
+</ul>
+<h2 id="Ch-18">Ch.18</h2>
+<ul>
+<li>Current assets are held primarily for trading or that are expected to be sold, used up or otherwise realized in cash within one year or one operating cycle</li>
+<li>Current liabilities are liabilites expected to be settled within one year or within one operating cycle of the business</li>
+<li>Working capital is the excess of current assets over current liabilities</li>
+<li>Financial assets are measured and reported at either amortized cost or fair value</li>
+<li>Prepaid expenses are normal operating expenses that have been paid in advance</li>
+<li>Account payable are accounts that a company owes its vendors for purchases of goods and services</li>
+<li>Accrued expenses are expenses that have been recognized on the income statement but not yet been paid as of balance sheet</li>
+<li>Deferred income arises when a company receives payment in advance of delivery of the goods and servies</li>
+<li>Derivatives are financial instruments for which the value is derived based on some underlying factor</li>
+<li>The balance sheet distinguishes between current and non current assets and liabilities</li>
+<li>Land is not depreciated</li>
+<li>Financial instruments are contracts that give rise to both a financial asset of one entity and a financial liability or equity instrument</li>
+<li>Typical long term financial liabilities include loans and notes or bonds payable</li>
+</ul>
+<h2 id="Ch-19">Ch.19</h2>
+<ul>
+<li>The direct method discloses operating cash inflows by source, and operating cash outflows by use in the operating activities</li>
+<li>The indirect method reconciles net income to operating cash flow by adjusting net income for all non cash items</li>
+<li>The cash flow statement is linked to income statement and comparartive balance sheets and to data on those statements</li>
+<li>Investing activities: purchases and sales of long term assets</li>
+<li>Operating activities: purchase and sales of securities held for trading, payment of interest and receipt of dividends</li>
+<li>Financing activities: payment of dividends</li>
+</ul>
+<h2 id="Ch-20">Ch.20</h2>
+<ul>
+<li>Inventory turnover: cost of goods sold / average inventory</li>
+<li>Working capital turnover: revenue / average working capital</li>
+<li>ROA: net income / average total assets</li>
+<li>ROE: net income / average shareholders equity = net profit margin x total asset turnover x average shareholders equity</li>
+<li>Valuation ratios express the relation between the market value of a company or its equity</li>
+</ul>
+<h2 id="Ch-21">Ch.21</h2>
+<ul>
+<li>The total cost of inventories includes all costs of purchase, costs of conversion, and other costs incurred in bringing the inventories to their location and condition</li>
+<li>Storage costs of finished inventory and abnormal costs due to waste are treated as expenses</li>
+<li>A company must use the same cost formula for all inventories having a similar nature and use to the entity</li>
+<li>If a company changes an accounting policy, the change must be justifiable and applied retrospectively to the financial statements.</li>
+<li>Net realizable value is the estimated selling price in the ordinary course of business less the estimated costs necessary to make the sale</li>
+<li>Market value is the current replacement cost subject to an upper limit of net realizable value and a lower limit of net realizable value less a normal profit margin</li>
+<li>Reversals of inventory write downs may occur under IFRS but are not allowed under GAAP</li>
+</ul>
+<h2 id="Ch-22">Ch.22</h2>
+<ul>
+<li>Expenditures related to long lived assets are capitalised as part of the cost of assets if they are expecetd to provide future benefits</li>
+<li>Otherwise, expenditures related to long lived assets are expensed as incurred</li>
+<li>Companies must capitalize interest costs associated with acquiring or constructing an asset that requires a long period of time to prepare for its intended use</li>
+<li>Including capitalized interest in the calculation of interest coverage ratios provides a better assessment of a companys solvency</li>
+<li>Intangible assets with an indefinite useful life are not amortised but are reviewed for impairment annually</li>
+<li>Impairment disclosures can provide useful information about a company’s expected cash flows</li>
+<li>The average remaining useful life of a company’s assets can be estimated as net PPE divided by depreciation expense</li>
+<li>Gain or loss on the sale of long-lived assets is computed as the sales proceeds minus the carrying amount of asset at the time of sale</li>
+</ul>
+<h2 id="Ch-23">Ch.23</h2>
+<ul>
+<li>Differences between the recognition of revenue and expenses for tax and accounting purposes may result in taxable income differing from accounting profit</li>
+<li>The tax base of an asset is the amount that will be deductible for tax purposes as an expense in the calculation of taxable income as the company expenses the tax basis of the asset</li>
+<li>Temporary differences arise from recognition of differences in the tax base and carrying amount of assets and liabilities</li>
+<li>Permanent differencess result in a difference in tax and financial reporting of revenue that will not be reversed at some future date</li>
+<li>All unrecognized deferred tax assets and liabilities must be reassessed on the appropriate balance sheet date and meaured against their probable future economic benefit</li>
+</ul>
+<h2 id="Ch-24">Ch.24</h2>
+<ul>
+<li>The reported interest expense on bonds is based on the effective interest rate</li>
+<li>An issuer amortises any issuance discount or premium on bonds over the life of the bods</li>
+<li>Debt covenants impose restrictions on borrowers, such as limitations on future borrowing or requirement</li>
+<li>The carrying amount of bonds is typically the amortized historical cost, which can differ from their fair value</li>
+<li>Finance leases resemble an asset purchase or sale while operating leases resemble a rental agreement</li>
+</ul>
+<h2 id="Ch-25">Ch.25</h2>
+<ul>
+<li>Financial reporting quality can be thought of as spanning a continuum from the highest to the lowest</li>
+<li>Reporting quality pertains to the the information disclosed, high quality represents the economic reality of the company activities</li>
+<li>Results quality pertains to the earnings and cash generated by the companys actual economic activities, and the resulting financial condition, relative to expectations of current and future financial performanc</li>
+<li>Aggressive typically refers to choices that aim to enhance the companys reported performance and financial position by inflating the amount of revenues, earnings, and operating cash flow, or by decreasing expenses or amount of debt</li>
+<li>Conservatism in financial report can result from either accounting standards that specifically require a conservative treatment of a transaction or judgement made by managers when applying accounting standaards that result in conservative results</li>
+<li>Pro forma earnings adjust earnings as reported on the income statement</li>
+<li>Cash from operations is a metric of interest to investors that can be enhanced by operating choices, such as stretching accounts payable, and potentially by classification choices.</li>
+</ul>
+<h2 id="Ch-26">Ch.26</h2>
+<ul>
+<li>Evaluating a company’s historical performance addresses not only what happened but also the causes behind the company’s performance and how the performance reflects the company’s strategy</li>
+<li>The projection begins with a top down sales forecast in which the analyst forecast industry sales and the companys market share</li>
+<li>Projections of future performance are needed for discounted cash flow valuation of equity</li>
+<li>Credit analysis uses financial statement analysis to evaluate credit relevant facotrs, including tolerance for leverage, operational stability, and margin stability</li>
+<li>Adjustments can include those related to investments, PPE, and goodwill</li>
+</ul>
+<h2 id="Ch-27">Ch.27</h2>
+<ul>
+<li>Corporate governance can be defined as a system of controls nd procedures by which individual companies are managed</li>
+<li>Shareholders, creditors, managers and employees, the board of directors, customers, suppliers, and goverment and regulators</li>
+<li>General meetings, a board of directors, the audit function, company reporting and transparency, remuneration policies</li>
+<li>Two primary duties of a board of directors are duty of care and duty of loyalty</li>
+</ul>
+<h2 id="Ch-28">Ch.28</h2>
+<ul>
+<li>Sunk cost is one that has been already incurred, which cannot be changed</li>
+<li>Opportunity cost is what a resource is worth in its next best use</li>
+<li>Incremental cash flow is the cash flow that is realized beacuse of an investment decision</li>
+<li>$$\text{NPV}=\sum^n_{t=0}\dfrac{\text{CF}_t}{(1+r)^t}$$</li>
+<li>The capital allocation decision rules are to invest if the NPV&gt;0 or IRR&gt;r</li>
+</ul>
+<h2 id="Ch-29">Ch.29</h2>
+<ul>
+<li>Marketable securities are financial instruments, such as stocks and bonds, that can be quickly sold and converted to cash</li>
+<li>Secured loans are loans in which the lender requires the company to provide collateral in the form of an asset</li>
+<li>Commercial paper is a short term, unsecured instrument typically issed by large and well rated companies</li>
+</ul>
+<h2 id="Ch-30">Ch.30</h2>
+<ul>
+<li>Cost of capital is the rate of return that the suppliers of capital require as compensation for the capital</li>
+<li>$\text{WACC}=w_dr_d(1-t)+w_pr_p+w_er_e$</li>
+<li>Yield to maturity is the annual return that an investor earns on a bond if purchased today</li>
+<li>The cost of preferred stock is the preferred stock dividend divided by the current preferred stock price</li>
+<li>The cost of equity is the rate of return required by common stockholders, using CAPM</li>
+</ul>
+<h2 id="Ch-31">Ch.31</h2>
+<ul>
+<li>Firm value is independent of the capital structure decision</li>
+<li>To maximize firm value, management should target the optimal capital structure that minimizes the company’s weighted average cost of capital.</li>
+<li>Financing decisions are typically tied to investment spending and based on the company’s ability to support debt given the nature of its business and operating cash flows.</li>
+</ul>
+<h2 id="Ch-32">Ch.32</h2>
+<ul>
+<li>Degree of operating leverage (DOL) = $\Delta$Operating Income / $\Delta$Units sold</li>
+<li>Degree of financial leverage (DFL) = $\Delta$Net Income / $\Delta$Operating Income</li>
+<li>DTL = DOL $\times$ DFL</li>
+<li>$Q_b=\frac{F+C}{P-V}$</li>
+</ul>
+<h2 id="Ch-33">Ch.33</h2>
+<ul>
+<li>Money markets trade debt instruments maturing in one year or less</li>
+<li>Capital markets trade instruments of longer duration, such as bonds and equities</li>
+<li>Forward contract is an agreement to trade the underlying aset in the future at a price agreed today</li>
+<li>Futures contract is a standardized forward contract for which a clearinghouse guarantees the performance of all traders</li>
+<li>Counterparty risk is the risk that the other party to a contract will fail to honor the terms</li>
+<li>Swap contract is an agreement to exchange payments of periodic cash flows that depend on future asset prices or interest rates</li>
+<li>Option contract allows the holder of the option to buy or sell an underlying instrument at a specified price at or before a specified date in the future</li>
+<li>An option to buy is a call option, an option to sell is put option</li>
+<li>Brokers are agents who fill orders for their clients</li>
+<li>Investment banks provide advice to their mostly corporate clients and help them arrange transactions</li>
+<li>Exchanges provdie places where traders can meet to arrange their trades</li>
+<li>Dealers fill their clients orders by trading with them</li>
+<li>Position is the quantity of instrument that an entity owns or owes</li>
+<li>Market order instructs the broker or exchange to obtain the best price immediately available</li>
+</ul>
+<h2 id="Ch-34">Ch.34</h2>
+<ul>
+<li>Security market indexes are intended to measure the values of different target markets</li>
+<li>Price return index reflects only the prices of the consittuent securities</li>
+<li>Proper use of security market indexes depends on understanding their construction and management.</li>
+</ul>
+<h2 id="Ch-35">Ch.35</h2>
+<ul>
+<li>Market value is the price at which an asset can currently be bought or sold</li>
+<li>Intrinsic value is the value that would be place don it by investors if understood completely</li>
+<li>Arbitrage is a set of transactions that produces riskless profits</li>
+<li>Short selling is where an investor sells shares that he or she does not own by borrowing</li>
+<li>Risk aversion refers to the tendency of people to displikee risk and to require higher expected returns</li>
+<li>Loss aversion refers to the tendency of people to dislike losses more than comparable gains</li>
+<li>Herding occurs when investors trade on the same side of the market in the same securities</li>
+<li>The efficiency of a market is affected by the number of market participants and depth of so on</li>
+<li>Size anomaly, the January anomaly and the winners losers anomalies</li>
+</ul>
+<h2 id="Ch-36">Ch.36</h2>
+<ul>
+<li>Common shares represent an ownership interest in a company</li>
+<li>Vote by proxy, which allows a designated party, such as another shareholder to vote on his/her behalf</li>
+<li>Statutory voting, each share represents one vote</li>
+<li>Cumulative voting allows shareholders to direct their total voting rights to specific candidates</li>
+<li>Preferrence shares rank above common shares with respect to the payment of dividends and distribution of net assets upon liquidation</li>
+<li>Private equity securities are issued primarily to instiutional investors via non public offering</li>
+<li>Venture capital investments provide seed or start up capital to companies</li>
+<li>Leveraged buyout occurs when a group of investors uses a large amount of debt to purchase all of the outstanding common shares of a publicly traded company</li>
+<li>A company’s accounting return on equity is the total return that it earns on shareholders’ book equity</li>
+</ul>
+<h2 id="Ch-37">Ch.37</h2>
+<ul>
+<li>A cyclical company is one whose performance is largely correlated with the strength of the overall company</li>
+<li>Commercial industry classification systems include GICS, ICB</li>
+<li>Embryonic, growth, shakeout, mature, decline</li>
+</ul>
+<h2 id="Ch-38">Ch.38</h2>
+<ul>
+<li>Dividend is a distribution paid to shareholders based on the number of shares owned</li>
+<li>Stock dividend is where a company distibutes additional shares of its common stock to shareholders</li>
+<li>Buyback is a transaction where a company uses cash to buy back its own shares</li>
+<li>$V_0=\sum^\infty_{t=1} \frac{D_t}{(1+r)^t} $</li>
+<li>Required rate of return = current expected risk - free rate of return + Beta*[market risk premium]</li>
+<li>$V_0=\frac{D_0(1+g)}{r-g}$</li>
+<li>$P_0=\frac{D_1}{r-g}$</li>
+<li>Three major categories of equity valuation models are present value, multiplier, and asset based</li>
+</ul>
+<h2 id="Ch-39">Ch.39</h2>
+<ul>
+<li>Bond is a contractual agreement between the issuer and the bondholder</li>
+<li>Asset backed securities are involved in moving assets from the owner of the assets into a special legal entity, which uses the securitized assets as guarantees to back a bond issue</li>
+<li>Tenor is the time remaining until the bonds maturity date</li>
+<li>Principal of a bond is the amount that the issuer agrees to repay the bondholders on the maturity date</li>
+<li>Coupon rate is the interest rate that the issuer agrees to pay until maturity</li>
+<li>YTM is the internal rate of return on a bonds expected cash flows</li>
+<li>Covenants are clauses that specify the rights of the bondholders and any actions that the issuer is obligated to perform or prohibited from performing</li>
+<li>Callable bond gives the issuer the right to redeem all or part of the bond before maturity date</li>
+<li>Putable bond gives the bondholders the right to sell the bond back to the issuer at a price on a date</li>
+<li>Convertible bond gives the bondholder the right to exchange the bond for a number of common shares</li>
+<li>Bond covenants are legally enforceable ruels that borrowers and lenders agree on at the time of new bond</li>
+</ul>
+<h2 id="Ch-40">Ch.40</h2>
+<ul>
+<li>Commercial papre is a short term, unsecured promissory note issued in the public market or via a private placement</li>
+<li>Certificate of deposit represents a specified amount of funds on deposit for a specified maturity and rate</li>
+<li>Repurchase agreement is the sale of a security with a simultaneous agreement to buy the same security back from the purchaser at an agreed on price and future date</li>
+<li>Money markets are where securities with original maturities ranging from overnight to one year are issued and traded.</li>
+<li>Capital markets are where securities with original maturities longer than one year are issued and traded.</li>
+<li>Public bond issuing mechanisms include underwritten offerings, best-efforts offerings, shelf registrations, and auctions.</li>
+</ul>
+<h2 id="Ch-41">Ch.41</h2>
+<ul>
+<li>$PV = \frac{PMT}{(1+r)^1}+\frac{PMT}{(1+r)^2}+…+\frac{PMT+FV}{(1+r)^N}$</li>
+<li>Spot rate is YTM on zero coupon bonds maturing at the date of each cash flow</li>
+<li>Full price = flat price + accrued interest</li>
+<li>$AI = \frac{t}{T}\times PMT$</li>
+<li>$PV = FV \times (1-\frac{Days}{Years}\times DR)$</li>
+<li>The market discount rate is the rate of return required by investors given the risk of investment</li>
+<li>A bond price moves inversely with its market discount rate</li>
+<li>YTM could be approximated as a weighted average of the underlying spot rates</li>
+<li>Current yield is the annual coupon payment divided by the flat price</li>
+<li>Money market instruments having one year or less time to maturity, are quoted on a discount rate or add on rate basis</li>
+<li>A forward rate is the interest rate on a bond or money market instrument traded in a forward market</li>
+<li>A bond YTM can be seperated into a benchmark and a spread</li>
+</ul>
+<h2 id="Ch-42">Ch.42</h2>
+<ul>
+<li>Foreclosure allows the lender to take possession of the mortaged property and then sell it in order to recover funds toward satisfying the debt obligation</li>
+<li>The cash flows of the debt obligations are used to make interest payments and principal repayments to the holders of thhe ABS</li>
+<li>Companys funding cost is often lower when raising funds through securitization than when issuing bonds</li>
+<li>Contraction risk is when interest rate declines, which will have a shorter maturity than was anticipated</li>
+<li>Extension risk is when interest rate rises, fewer prepayments will occur</li>
+</ul>
+<h2 id="Ch-43">Ch.43</h2>
+<ul>
+<li>Three sources of return on a fixed rate bond are, recepit of the promised coupon and principal payments, reinvestment of coupon payments, potential capital gains or losses</li>
+<li>Total return is the future value of reinvested coupon interest payments and the sale price</li>
+<li>Horizon yield is the internal rate of return between the total return and purchase price of the bond</li>
+<li>Capital gains or losses are measured from the carrying value of the bond and not from the purchase price</li>
+<li>Bond duration measures the sensitivity of the full price to a change in interest rate</li>
+<li>Yield duration measures the sensitivity of a bonds full price to its own YTM</li>
+<li>Curve duration measures the sensitivity of full price to the benchmark yield curve</li>
+</ul>
+<h2 id="Ch-44">Ch.44</h2>
+<ul>
+<li>Credit risk is the risk of loss resulting from the borrower failing to make full payment of interests</li>
+<li>Expected loss = Default probability x Loss severity given default</li>
+<li>Four C of credit analysis: capacity, collateral, covenants, character</li>
+<li>Credit related risks include downgrade risk and market liquidity risk</li>
+<li>Yield spread = liquidity premium + credit spread</li>
+</ul>
+<h2 id="Ch-45">Ch.45</h2>
+<ul>
+<li>A derivative is a financial instrument that derives its performance from performance of underlying asset</li>
+<li>Derivatives can be created as standardized instruments or customized instruments</li>
+<li>A forward contract is an OTC derivative contract where the buyer will purchase an underlying asset from the other at a later date and at a fixed price</li>
+<li>A future contract is similar to forward contract but is a standardized derivative contract created and treaded on a futures exchange</li>
+<li>A swap is an OTC derivative contract where two parites exchange a series of cash flows, whereby one party pays a variable series based on underlying asset or rate, and the other party pays either a varaible series or rate or a fixed series</li>
+<li>An option is where the buyer pays a sum of money to the seller and receives the right to either buy or sell an underlying asset at a fixed price</li>
+<li>Derivatives are issued on equities, fixed income securities, interest rates, currencies, commodities, credit and a variety of such diverse underlyings as weather, electricity, and disaster claims</li>
+<li>Derivatives are typically priced by forming a hedge involving the underlying asset and a derivative such that the combination must pay the risk free rate and do so for only one derivative price</li>
+<li>Arbitrage is the condition that two equivalent assets or derivatives or combinations sell for different prices, leading to an opportunity to buy at the low price and sell at the high price</li>
+</ul>
+<h2 id="Ch-46">Ch.46</h2>
+<ul>
+<li>The price of the underlying asset is equal to the expected future price discounted at the risk free rate, plus the present valueo of any benefits, minus the present value of any costs associated with holding the asset</li>
+<li>The value of a forward contract at expiration is the value of the asset minus the present value of the foward price</li>
+<li>The value of a forward contract before expiration is the value of the asset minus the present value of the forward price</li>
+<li>Futures prices can differ from forward prices because of the effect of interest rates on the interim cash flows from the daily settlement.</li>
+</ul>
+<h2 id="Ch-47">Ch.47</h2>
+<ul>
+<li>Alternative investments include investments in the following: hedge funds, private capital, natural resources, real estate, and infrastructure</li>
+<li>Alternative investment strategies typically active, return seeking strategies that also often have risk characteristics different from traditional long only investment</li>
+<li>Lower liquidity, less regulation, lower transparency, higher fees, limited historical risk and return data</li>
+<li>The potential for portfolio diversification resulting in a higher risk adjusted return for the portfolio</li>
+<li>Many uses a partnership structure with a general partner that manages the business and limited partners who own fractional interests in the partnership</li>
+</ul>
+<h2 id="Ch-48">Ch.48</h2>
+<ul>
+<li>Money market funds are mutual funds that invest in short term money market instruments such as treasury bills, certificates of deposits, and commercial paper</li>
+<li>Bond mutual funds consisting of a portfolio of individual bonds and preferred shares</li>
+<li>Stock mutual funds based on market value of assets under management</li>
+</ul>
+<h2 id="Ch-49">Ch.49</h2>
+<ul>
+<li>Investors are risk averse, and historical data confirm that financial markets price assets for risk averse investors</li>
+<li>Combining assets with low correlations reduces portfolio risk</li>
+<li>The addition of a risk-free asset creates portfolios that are dominant to portfolios of risky assets in all cases except for the optimal risky portfolio</li>
+<li>Holding period return is most appropriate for a single, predefined holding period</li>
+</ul>
+<h2 id="Ch-50">Ch.50</h2>
+<ul>
+<li>The capital market line is a special case of the capital allocation line, where the efficient portfolio is the market porfolio</li>
+<li>Investors can leverage their portfolios by borrowing money and investing in the market</li>
+<li>Beta risk, or systematic risk, is priced and earns a return whereas nonsystematic risk is not priced</li>
+<li>Expected return from the CAPM can be used for making capital budgeting decisions</li>
+</ul>
+<h2 id="Ch-51">Ch.51</h2>
+<ul>
+<li>Risk objectives are specifications for portfolio risk that reflect the risk tolerance of the client</li>
+<li>The clients overall risk tolerance is a function of both the clients ability to accept risk and the clients risk attitude, which can be considered the clients willingness to take risk</li>
+<li>The liquidity section of the IPS should state what the clients requirements are to draw cash from the portfolio</li>
+</ul>
+<h2 id="Ch-52">Ch.52</h2>
+<ul>
+<li>Behavioral biases may be categorized as either cognitive errors or emotional biases</li>
+<li>To adapt to a bias is to recognize and accept the bias and to adjust for the bias rather than to attempt to moderate the bias</li>
+<li>To moderate a bias is to recognize the bias and to attempt to reduce or even eliminate the bias within the individual</li>
+<li>Behavioral finance has the potential to explain some apparent deviations from market efficiency</li>
+</ul>
+<h2 id="Ch-53">Ch.53</h2>
+<ul>
+<li>Solvency risk is the risk that the company does not survive or succeed because it runs out of cash</li>
+<li>Value at risk or VaR, is a measure of the size of the tail of the distribution of profits on a portfolio or organization</li>
+<li>Risk exposure is the extent to which an organization’s value may be affected through sensitivity to underlying risks</li>
+<li>Common measures of risk include standard deviation or volatility; asset-specific measures, such as beta or duration; derivative measures, such as delta, gamma, vega, and rho; and tail measures such as value at risk, CVaR and expected loss given default.</li>
+<li>Risk can be modified by prevention and avoidance, risk transfer (insurance), or risk shifting (derivatives)</li>
+</ul>
+<h2 id="Ch-54">Ch.54</h2>
+<ul>
+<li>Technical analysis is a form of security analysis that uses price data and volume data, typically displayed in charts</li>
+<li>The market discounts everything, prices move in trends and countertrends, price action is repetitive, with patterns</li>
+</ul>
+<h2 id="Ch-55">Ch.55</h2>
+<ul>
+<li>Fintech refers to technology driven innovation occurring in the financial services industry</li>
+<li>Big data is characterized by the three Vs - volume, velocity, and variety</li>
+<li>Natural langugage processing is an application of text analytics that uses insight into the structure of human language to analyze and interpret text and voice based data</li>
+</ul>
+<h2 id="Ch-56">Ch.56</h2>
+<ul>
+<li>Ethics refers to the study of making good choices</li>
+</ul>
+<h2 id="Ch-57">Ch.57</h2>
+<ul>
+<li>The <em>Standards of Practice Handbook</em> (<em>Handbook</em>) provides guidance to the people who grapple with real ethical dilemmas in the investment profession on a daily basis</li>
+</ul>
+<h2 id="Ch-58">Ch.58</h2>
+<ul>
+<li>Guidance for CFA</li>
+</ul>
+<h2 id="Ch-59">Ch.59</h2>
+<ul>
+<li>The mission of the GIPS standards is to promote ethics and integrity</li>
+</ul>
+<h2 id="Ch-60">Ch.60</h2>
+<ul>
+<li>Ethics application</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__title"><span class="post-copyright-info"><h>CFA</h></span></div><div class="post-copyright__type"><span class="post-copyright-info"><a href="https://www.fayyer.com/CFA/">https://www.fayyer.com/CFA/</a></span></div><div class="post-copyright-m"><div class="post-copyright-m-info"><div class="post-copyright-a"><h>作者</h><div class="post-copyright-cc-info"><h>独孤若梦</h></div></div><div class="post-copyright-c"><h>发布</h><div class="post-copyright-cc-info"><h>2023-02-15</h></div></div><div class="post-copyright-u"><h>更新</h><div class="post-copyright-cc-info"><h>2025-05-16</h></div></div><div class="post-copyright-c"><h>协议</h><div class="post-copyright-cc-info"><a class="icon" rel="noopener" target="_blank" title="Creative Commons" href="https://creativecommons.org/"><i class="fab fa-creative-commons"></i></a><a rel="noopener" target="_blank" title="CC BY-NC-SA 4.0" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY-NC-SA 4.0</a></div></div></div></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/%E9%98%B4%E9%98%B3%E8%AE%BA/" title="阴阳论"><img class="cover" src="https://s2.loli.net/2024/07/22/bA1BFyH8qtLSiuQ.png" onerror="onerror=null;src='/custom/cover.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">阴阳论</div></div></a></div><div class="next-post pull-right"><a href="/Markdown/" title="Markdown"><img class="cover" src="https://s2.loli.net/2024/07/12/gMhZfxjPspuEY6t.png" onerror="onerror=null;src='/custom/cover.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Markdown</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-yin-yang fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="twikoo-wrap"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="/custom/Avatar.png" onerror="this.onerror=null;this.src='/custom/cover.jpg'" alt="avatar"/></div><div class="author-info__name">独孤若梦</div><div class="author-info__description">浮生若梦，梦若浮生</div></div></div><div class="card-widget" id="card-poem">     <div id="poem_sentence">     </div><div id="poem_info">     <div id="poem_dynasty">     </div><div id="poem_author">     </div></div></div><script src="https://cdn.jsdelivr.net/npm/js-heo@1.0.11/poem/jinrishici.js" charset="utf-8">     </script><script type="text/javascript">function loadPoemIfFirstOfDay() {  
+  const today = new Date().toISOString().split('T')[0]; // 获取今天的日期（YYYY-MM-DD）  
+  const storedDate = localStorage.getItem('poemDate'); // 获取存储的日期  
+  const storedPoem = JSON.parse(localStorage.getItem('poemData')); // 获取存储的诗词数据  
+
+  if (storedDate !== today) { // 如果存储的日期不是今天  
+    jinrishici.load(function(result) {  
+      localStorage.setItem('poemDate', today); // 更新存储的日期  
+      localStorage.setItem('poemData', JSON.stringify(result.data)); // 存储诗词数据  
+
+      displayPoem(result.data);  
+    });  
+  } else {  
+    displayPoem(storedPoem); // 如果存储的日期是今天，则直接显示存储的诗词数据  
+  }  
+}  
+
+function displayPoem(poemData) {  
+  var sentence = document.querySelector("#poem_sentence");  
+  var author = document.querySelector("#poem_author");  
+  var dynasty = document.querySelector("#poem_dynasty");  
+
+  var sentenceText = poemData.content;  
+
+  sentenceText = sentenceText.replace(/[,，。？！；：“”‘’“”『』【】（）《》〈〉]/g, function(match) {  
+    return match === ',' || match === '，' ? '<br>' : '';  
+  });  
+
+  sentenceText = sentenceText.replace(/<br>$/, '');  
+
+  sentence.innerHTML = sentenceText;  
+  dynasty.innerHTML = poemData.origin.dynasty;  
+  author.innerHTML = poemData.origin.author + '《' + poemData.origin.title + '》';  
+}  
+
+// 调用函数加载诗词  
+loadPoemIfFirstOfDay();</script><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link"><span class="toc-number">1.</span> <span class="toc-text">CFA</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-1"><span class="toc-number">1.1.</span> <span class="toc-text">Ch.1</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-2"><span class="toc-number">1.2.</span> <span class="toc-text">Ch.2</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-3"><span class="toc-number">1.3.</span> <span class="toc-text">Ch.3</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-4"><span class="toc-number">1.4.</span> <span class="toc-text">Ch.4</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-5"><span class="toc-number">1.5.</span> <span class="toc-text">Ch.5</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-6"><span class="toc-number">1.6.</span> <span class="toc-text">Ch.6</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-7"><span class="toc-number">1.7.</span> <span class="toc-text">Ch.7</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-8"><span class="toc-number">1.8.</span> <span class="toc-text">Ch.8</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-9"><span class="toc-number">1.9.</span> <span class="toc-text">Ch.9</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-10"><span class="toc-number">1.10.</span> <span class="toc-text">Ch.10</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-11"><span class="toc-number">1.11.</span> <span class="toc-text">Ch.11</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-12"><span class="toc-number">1.12.</span> <span class="toc-text">Ch.12</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-13"><span class="toc-number">1.13.</span> <span class="toc-text">Ch.13</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-14"><span class="toc-number">1.14.</span> <span class="toc-text">Ch.14</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-15"><span class="toc-number">1.15.</span> <span class="toc-text">Ch.15</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-16"><span class="toc-number">1.16.</span> <span class="toc-text">Ch.16</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-17"><span class="toc-number">1.17.</span> <span class="toc-text">Ch.17</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-18"><span class="toc-number">1.18.</span> <span class="toc-text">Ch.18</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-19"><span class="toc-number">1.19.</span> <span class="toc-text">Ch.19</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-20"><span class="toc-number">1.20.</span> <span class="toc-text">Ch.20</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-21"><span class="toc-number">1.21.</span> <span class="toc-text">Ch.21</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-22"><span class="toc-number">1.22.</span> <span class="toc-text">Ch.22</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-23"><span class="toc-number">1.23.</span> <span class="toc-text">Ch.23</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-24"><span class="toc-number">1.24.</span> <span class="toc-text">Ch.24</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-25"><span class="toc-number">1.25.</span> <span class="toc-text">Ch.25</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-26"><span class="toc-number">1.26.</span> <span class="toc-text">Ch.26</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-27"><span class="toc-number">1.27.</span> <span class="toc-text">Ch.27</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-28"><span class="toc-number">1.28.</span> <span class="toc-text">Ch.28</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-29"><span class="toc-number">1.29.</span> <span class="toc-text">Ch.29</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-30"><span class="toc-number">1.30.</span> <span class="toc-text">Ch.30</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-31"><span class="toc-number">1.31.</span> <span class="toc-text">Ch.31</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-32"><span class="toc-number">1.32.</span> <span class="toc-text">Ch.32</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-33"><span class="toc-number">1.33.</span> <span class="toc-text">Ch.33</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-34"><span class="toc-number">1.34.</span> <span class="toc-text">Ch.34</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-35"><span class="toc-number">1.35.</span> <span class="toc-text">Ch.35</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-36"><span class="toc-number">1.36.</span> <span class="toc-text">Ch.36</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-37"><span class="toc-number">1.37.</span> <span class="toc-text">Ch.37</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-38"><span class="toc-number">1.38.</span> <span class="toc-text">Ch.38</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-39"><span class="toc-number">1.39.</span> <span class="toc-text">Ch.39</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-40"><span class="toc-number">1.40.</span> <span class="toc-text">Ch.40</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-41"><span class="toc-number">1.41.</span> <span class="toc-text">Ch.41</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-42"><span class="toc-number">1.42.</span> <span class="toc-text">Ch.42</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-43"><span class="toc-number">1.43.</span> <span class="toc-text">Ch.43</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-44"><span class="toc-number">1.44.</span> <span class="toc-text">Ch.44</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-45"><span class="toc-number">1.45.</span> <span class="toc-text">Ch.45</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-46"><span class="toc-number">1.46.</span> <span class="toc-text">Ch.46</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-47"><span class="toc-number">1.47.</span> <span class="toc-text">Ch.47</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-48"><span class="toc-number">1.48.</span> <span class="toc-text">Ch.48</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-49"><span class="toc-number">1.49.</span> <span class="toc-text">Ch.49</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-50"><span class="toc-number">1.50.</span> <span class="toc-text">Ch.50</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-51"><span class="toc-number">1.51.</span> <span class="toc-text">Ch.51</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-52"><span class="toc-number">1.52.</span> <span class="toc-text">Ch.52</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-53"><span class="toc-number">1.53.</span> <span class="toc-text">Ch.53</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-54"><span class="toc-number">1.54.</span> <span class="toc-text">Ch.54</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-55"><span class="toc-number">1.55.</span> <span class="toc-text">Ch.55</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-56"><span class="toc-number">1.56.</span> <span class="toc-text">Ch.56</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-57"><span class="toc-number">1.57.</span> <span class="toc-text">Ch.57</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-58"><span class="toc-number">1.58.</span> <span class="toc-text">Ch.58</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-59"><span class="toc-number">1.59.</span> <span class="toc-text">Ch.59</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Ch-60"><span class="toc-number">1.60.</span> <span class="toc-text">Ch.60</span></a></li></ol></li></ol></div></div></div></div></main><footer id="footer"><footer><p><i class="fas fa-heartbeat heartbeat-icon"></i> @独孤若梦 </p></footer></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-yin-yang"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"><i class="fas fa-arrow-up"></i></span><span id="percent">0</span><span>%</span></button></div></div><div class="js-pjax" id="rightMenu"><div class="rightMenu-group rightMenu-small"><a class="rightMenu-item" href="javascript:window.history.back();"><i class="fa fa-arrow-left"></i></a><a class="rightMenu-item" href="javascript:window.history.forward();"><i class="fa fa-arrow-right"></i></a><a class="rightMenu-item" href="javascript:window.location.reload();"><i class="fa fa-refresh"></i></a><a class="rightMenu-item" href="javascript:rmf.scrollToTop();"><i class="fa fa-arrow-up"></i></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-text"><a class="rightMenu-item" href="javascript:rmf.copySelect();"><i class="fa fa-copy"></i><span>复制</span></a><a class="rightMenu-item" href="javascript:window.open(&quot;https://www.baidu.com/s?wd=&quot;+window.getSelection().toString());window.location.reload();"><i class="fa fa-search"></i><span>百度搜索</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-too"><a class="rightMenu-item" href="javascript:window.open(window.getSelection().toString());window.location.reload();"><i class="fa fa-link"></i><span>转到链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-paste"><a class="rightMenu-item" href="javascript:rmf.paste()"><i class="fa fa-copy"></i><span>粘贴</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-post"><a class="rightMenu-item" href="#post-comment"><i class="fas fa-comment"></i><span>空降评论</span></a><a class="rightMenu-item" href="javascript:rmf.copyWordsLink()"><i class="fa fa-link"></i><span>复制地址</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-to"><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()"><i class="fa fa-window-restore"></i><span>窗口打开</span></a><a class="rightMenu-item" id="menu-too" href="javascript:rmf.open()"><i class="fa fa-link"></i><span>转到链接</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()"><i class="fa fa-copy"></i><span>复制链接</span></a></div><div class="rightMenu-group rightMenu-line hide" id="menu-img"><a class="rightMenu-item" href="javascript:rmf.saveAs()"><i class="fa fa-download"></i><span>保存图片</span></a><a class="rightMenu-item" href="javascript:rmf.openWithNewTab()"><i class="fa fa-window-restore"></i><span>窗口打开</span></a><a class="rightMenu-item" href="javascript:rmf.copyLink()"><i class="fa fa-copy"></i><span>复制链接</span></a></div><div class="rightMenu-group rightMenu-line"><a class="rightMenu-item" href="javascript:toRandomPost()"><i class="fa fa-paper-plane"></i><span>随便逛逛</span></a><a class="rightMenu-item" href="javascript:rmf.switchReadMode();"><i class="fa fa-book"></i><span>阅读模式</span></a><a class="rightMenu-item" href="/about/"><i class="fa fa-info-circle"></i><span>关于博客</span></a><a class="rightMenu-item" href="javascript:toggleWinbox();"><i class="fas fa-cog"></i><span>美化设置</span></a><a class="rightMenu-item" href="javascript:rmf.fullScreen();"><i class="fas fa-expand"></i><span>切换全屏</span></a><a class="rightMenu-item" href="javascript:window.print();"><i class="fa-solid fa-print"></i><span>打印页面</span></a></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/katex/dist/katex.min.css"><script src="https://cdn.jsdelivr.net/npm/katex/dist/contrib/copy-tex.min.js"></script><script>(() => {
+  document.querySelectorAll('#article-container span.katex-display').forEach(item => {
+    btf.wrap(item, 'div', { class: 'katex-wrap'})
+  })
+})()</script><script>(() => {
+  const init = () => {
+    twikoo.init(Object.assign({
+      el: '#twikoo-wrap',
+      envId: 'https://twikoo.fayyer.com',
+      region: '',
+      lang: 'zh-CN',
+      onCommentLoaded: () => {
+        btf.loadLightbox(document.querySelectorAll('#twikoo .tk-content img:not(.tk-owo-emotion)'))
+      }
+    }, null))
+  }
+
+  const loadTwikoo = () => {
+    if (typeof twikoo === 'object') setTimeout(init,0)
+    else getScript('https://cdn.jsdelivr.net/gh/FayyerDugu/twikoo@main/twikoo.min.js').then(init)
+  }
+
+  const getCount = () => {
+    const countELement = document.getElementById('twikoo-count')
+    if(!countELement) return
+    twikoo.getCommentsCount({
+      envId: 'https://twikoo.fayyer.com',
+      region: '',
+      urls: [window.location.pathname],
+      includeReply: false
+    }).then(res => {
+      countELement.textContent = res[0].count
+    }).catch(err => {
+      console.error(err)
+    })
+  }
+
+  if ('Twikoo' === 'Twikoo' || !false) {
+    if (false) btf.loadComment(document.getElementById('twikoo-wrap'), loadTwikoo)
+    else {
+      loadTwikoo()
+      
+    }
+  } else {
+    window.loadOtherComment = loadTwikoo
+  }
+})()</script></div><script src="//at.alicdn.com/t/c/font_3865036_1fs2ydl3ewv.js"></script><script async src="https://npm.elemecdn.com/tzy-blog/lib/js/other/sakura.js"></script><script type="text/javascript" src="https://npm.elemecdn.com/jquery@latest/dist/jquery.min.js"></script><script type="text/javascript" src="/js/rightmenu.js"></script><script async src="https://cdn.jsdelivr.net/npm/vue@2.6.14/dist/vue.min.js"></script><script async src="https://cdn.jsdelivr.net/npm/element-ui@2.15.14/lib/index.min.js"></script><script async data-pjax src="/js/anzhiyu.js"></script><script async src="/js/fps.js"></script><script async src="/js/copy.js"></script><script async src="/js/console.js"></script><script async src="/js/nav.js"></script><script async src="/js/readPercent.js"></script><script async src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script><script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script><script id="click-show-text" src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/dist/click-show-text.min.js" data-mobile="false" data-text="?" data-fontsize="15px" data-random="false" async="async"></script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css" media="print" onload="this.media='all'"><script src="https://npm.elemecdn.com/anzhiyu-blog-static@1.0.1/js/APlayer.min.js"></script><script src="https://cdn.jsdelivr.net/npm/meting@2.0.1/dist/Meting.min.js"></script><script src="https://cdn.jsdelivr.net/npm/pjax/pjax.min.js"></script><script>let pjaxSelectors = ["head > title","#config-diff","#body-wrap","#rightside-config-hide","#rightside-config-show",".js-pjax"]
+
+var pjax = new Pjax({
+  elements: 'a:not([target="_blank"])',
+  selectors: pjaxSelectors,
+  cacheBust: false,
+  analytics: false,
+  scrollRestoration: false
+})
+
+document.addEventListener('pjax:send', function () {
+
+  // removeEventListener
+  btf.removeGlobalFnEvent('pjax')
+  btf.removeGlobalFnEvent('themeChange')
+
+  document.getElementById('rightside').classList.remove('rightside-show')
+  
+  if (window.aplayers) {
+    for (let i = 0; i < window.aplayers.length; i++) {
+      if (!window.aplayers[i].options.fixed) {
+        window.aplayers[i].destroy()
+      }
+    }
+  }
+
+  typeof typed === 'object' && typed.destroy()
+
+  //reset readmode
+  const $bodyClassList = document.body.classList
+  $bodyClassList.contains('read-mode') && $bodyClassList.remove('read-mode')
+
+  typeof disqusjs === 'object' && disqusjs.destroy()
+})
+
+document.addEventListener('pjax:complete', function () {
+  window.refreshFn()
+
+  document.querySelectorAll('script[data-pjax]').forEach(item => {
+    const newScript = document.createElement('script')
+    const content = item.text || item.textContent || item.innerHTML || ""
+    Array.from(item.attributes).forEach(attr => newScript.setAttribute(attr.name, attr.value))
+    newScript.appendChild(document.createTextNode(content))
+    item.parentNode.replaceChild(newScript, item)
+  })
+
+  GLOBAL_CONFIG.islazyload && window.lazyLoadInstance.update()
+
+  typeof panguInit === 'function' && panguInit()
+
+  // google analytics
+  typeof gtag === 'function' && gtag('config', '', {'page_path': window.location.pathname});
+
+  // baidu analytics
+  typeof _hmt === 'object' && _hmt.push(['_trackPageview',window.location.pathname]);
+
+  typeof loadMeting === 'function' && document.getElementsByClassName('aplayer').length && loadMeting()
+
+  // prismjs
+  typeof Prism === 'object' && Prism.highlightAll()
+})
+
+document.addEventListener('pjax:error', e => {
+  if (e.request.status === 404) {
+    pjax.loadUrl('/404.html')
+  }
+})</script><script async data-pjax src="https://vercount.one/js"></script><div id="local-search"><div class="search-dialog"><nav class="search-nav"><span class="search-dialog-title"></span><span id="loading-status"></span><button class="search-close-button"><i class="fas fa-times"></i></button></nav><div class="is-center" id="loading-database"><i class="fas fa-spinner fa-pulse"></i><span>  加载</span></div><div class="search-wrap"><div id="local-search-input"><div class="local-search-box"><input class="local-search-box--input" placeholder="搜索文章" type="text"/></div></div><hr/><div id="local-search-results"></div><div id="local-search-stats-wrap"></div></div></div><div id="search-mask"></div><script src="/js/search/local-search.js"></script></div></div></body></html><script>var posts=["503/","521/","509/","523/","Blog/","HelloWorld/","CFA/","Markdown/","Needed/","News/","Project/","phone/","阴阳论/"];function toRandomPost(){ window.pjax ? pjax.loadUrl('/'+posts[Math.floor(Math.random()*posts.length)]) : window.open('/'+posts[Math.floor(Math.random()*posts.length)], "_self"); };</script>
